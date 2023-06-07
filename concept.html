@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>Creo 기본 교육 - 3. Parametric 개념</title>
+    <link rel="icon" href="../../favicon.png">
+    <meta charset="utf-8"> 
+    <style>
+     a {
+        color: black;
+        text-decoration: none;
+     }
+     h1 {
+        font-size: 50px;
+        text-align: center;
+        border-width: 7px;
+        border-color: green;
+        border-style: ridge;
+        margin: 0px;
+        padding: 15px;
+     }
+     #active {
+        color: blue;
+    }
+     .saw {
+        color: gray;
+    }
+    #grid {
+        display: grid;
+        grid-template-columns: 300px 1300px 200px;
+        grid-template-areas:
+            "index  main  log"
+    }
+    iframe {
+        position: fixed;
+        border-right: 2px solid green;
+        border-bottom: none;
+        border-left: none;
+        border-top: none;
+        width: 300px;
+        height: 100%;
+        margin: 0px;
+    }
+    @media(max-width :1300px) {
+        #grid {
+            display: block;
+            margin-top: 1000px;
+        }
+        iframe {
+            position: absolute;
+        }    
+    }
+    img {
+        margin: 40px 50px 10px 0px;
+    }
+    body {
+      margin: 0px;
+    }
+    u {
+        color: rgb(51, 104, 51)
+    }
+    </style>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+<p style="margin-top:5px;"></p>
+<h1><a href="CreoBasic.html" style="color: green;" title="Creo 기본 교육 메인페이지로 이동">Creo 기본 교육</a></h1>
+<iframe src="CreoBasicIndex.html"></iframe>
+<div id="grid">
+    <div></div>
+    <div style="margin-left:60px;">
+    <p style="margin-top:110px;"></p>
+        <h3><li>2D CAD와의 차이점</li></h3>
+        <p style="margin-top:50px;"></p>
+        <img src="3. concept/concept5.png" height="450">
+        <p style="margin-top: 40px;">2D cad는 그림의 개념이라 점과 선, 선들로 막힌 공간이 개념의 전부입니다.</p>
+        <p>때문에 하나를 수정 시 그와 연관된 설계들이 전부 변경되지 않습니다.</p>
+        <p style="margin-top: 30px;">(예를들어 2D cad의 경우 닫힌 공간에 해칭 적용 후 선을 제거해도 해칭이 남아 있습니다.)</p>
+        <p style="margin-top: 30px;">하지만 3D cad의 경우 공간(위치)과 부피, 물리의 개념이 적용되기 때문에 각 피쳐들이 연산 관계로 이어져 있습니다.</p>
+        <p>이번 시간에는 중요 개념들을 간단하게 알아보겠습니다.</p>
+        <p style="margin-top:100px;"></p>
+        <h3><li>모자 관계</li></h3>
+        <p style="margin-top:50px;"></p>
+        <img src="3. concept/concept6.png" height="450">
+        <p style="margin-top: 40px;">위와 같이 선풍기를 설계했습니다.</p>
+        <img src="3. concept/concept7.png" height="400">
+        <p>설계를 완성하고 보니 base arm의 shape이 마음이 들지 않습니다.</p>
+        <img src="3. concept/concept8.png" height="400">
+        <p>때문에 모양을 설계한 일부 돌출만 삭제하고 다시 설계하려고 한다면,</p>
+        <img src="3. concept/concept9.png" height="400">
+        <p>다음과 같이 아예 base arm의 대부분이 사라지고, 남아있는 피쳐들도 참조를 잃어 구현되고 있지 않습니다.</p>
+        <p>이것은 모자 관계를 모르고 작업을 하기 때문입니다.</p>
+        <p>Base arm.prt에서 삭제한 외형을 기준으로 '길이와 조립부를 설계했기 때문에 외형을 '모'로 설계한 모든 피쳐들은 정의를 잃게 되어 삭제됩니다.</p>             
+        <p style="margin-top:70px;">아래와 같이 원통에 구멍을 생성했습니다.</p>
+        <img src="3. concept/concept17.png" height="200">
+        <p>구멍의 위치는 원통의 윗면으로 부터 떨어진 거리를 기준으로 설계했습니다.</p>
+        <p>이러면 원통의 높이가 '모' 구멍의 위치가 '자'의 관계가 됩니다.</p>
+        <p>때문에 원통의 높이를 변경하면, 변경하지 않은 구멍의 위치도 함께 변경됩니다.</p>
+        <p style="margin-top:70px;"></p>
+        <img src="3. concept/concept.gif" height="300">
+        <p>변경 정도에 따라 아예 구멍이 원형이 아닐 수 있습니다.</p>
+        <p>만약 '다른 형상'(구멍에 삽입되는 핀 등)이 구멍을 기준으로 설계됐다면,</p>
+        <p>'다른 형상'은 기준이 사라져 구현되지 않을 수 있습니다.</p>
+        <p style="margin-top:40px;"></p>
+        <p>형상이 복작한 part나 어셈블리 단계에서는 모자관계에 의해 CAD 문제가 발생할 가능성이 있습니다.</p>
+        <p>때문에 모자관계를 적당히 활용하여 설계하는 능력이 필요합니다.</p>
+        <p style="margin-top:100px;"></p>
+        <h3><li>종속성</li></h3>
+        <p style="margin-top:50px;"></p>
+        <img src="3. concept/concept18.png" height="350">
+        <p>조립파일(asm)에서 파트파일(prt)들을 불러와 조립하다 보면 간섭이 일어나, 불러온 파트를 수정해야 할 때가 있습니다.</p>
+        <p>파트파일을 수정하면 바로 조립파일에 적용되어 업데이트 됩니다. 이는 도면 파일(drw)에도 영향을 줍니다.</p>
+        <p>도면 작업 중이었다면 따로 업데이트 하지 않아도, 파트의 변경된 부분이 도면에 바로 적용됩니다.</p>
+        <p>종속성 덕분에 모델 변경 때마다 도면을 새로 수정해야 하는 번거로움이 줄어듭니다.</p>
+        <p>그외에도 몇몇 기능에서(대칭복사, 형상복사 등) 종속성을 유지할지 제거할지 선택할 수 있습니다.</p>
+        <p>필요에 따라 적절한 선택을 해줘야 합니다.</p>
+        <img src="3. concept/concept19.png" height="300"><img src="3. concept/concept20.png" height="300">
+        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp다음과 같이 모델 수정하여 구멍 삭제 시 도면에 자동으로 적용됨</p>
+        <img src="3. concept/concept21.png" height="300"><img src="3. concept/concept22.png" height="300">
+        <p style="margin-top:100px;"></p>
+        <h3><li>모델트리</li></h3>
+        <p style="margin-top:50px;"></p>
+        <img src="3. concept/concept23.png" height="450">
+        <p>모델트리는 단순히 피쳐가 나열된 트리가 아닙니다. 요약된 설계 구조입니다.</p>
+        <p>모델트리를 보면 설계구조나 피쳐의 형성 순서, 모자관계 등을 파악할 수 있습니다.</p>
+        <p>모델트리를 이용하면 파트나 피쳐를 쉽게 선택할 수 있으며, 빠른 설계를 진행할 수 있습니다.</p>
+        <img src="3. concept/concept24.png" height="350">
+        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp다양한 트리들 활용</p>
+        <p style="margin-top:80px;">아래와 같이 예를 들어보겠습니다.</p>
+        <img src="3. concept/concept26.png" height="350">
+        <p>'밀어내기3'의 위치를을 변경하려합니다. 이때 'DTM1' 평면을 중심으로 이동하려 합니다.</p>
+        <img src="3. concept/concept27.png" height="350">
+        <p>하지만 'DTM1' 평면은 '밀어내기3'보다 뒤에 만들어진 데이텀이기 때문에 참조로 사용할 수 없습니다.</p>
+        <p>(모델트리, 그래픽 창 어디에서도 'DTM1"을 찾을 수 없기 때문에 이용할 수 없습니다.)</p>
+        <img src="3. concept/concept28.png" height="350">
+        <p>이럴 땐 드래그를 통해 'DTM1'을 '밀어내기3' 앞으로 생성 순서를 바꿔줍니다.</p>
+        <img src="3. concept/concept29.png" height="350">
+        <p>이제 '밀어내기3'에서 'DTM1'을 사용할 수 있는 것을 볼 수 있습니다.</p>
+
+        <p style="margin-top:70px;">앞으로 모델링을 진행하면서 모델 트리에 대해 더 자세히 알아보도록 하겠습니다.</p>
+        <p>이제 parametric 개념에 대한 교육이 끝났습니다.</p>
+        <p style="margin-top:70px;"></p>
+        <p>수고하셨습니다.</p>
+
+        <p style="margin-top:80px;"></p>
+    <h3><a href="CreoBasic.html" title="Creo 기본 교육 메인페이지로 이동" class="saw" id="active">Creo 기본 교육 페이지로 돌아가기</a></h3>
+    </div>
+</div>
+</body>
+</html>

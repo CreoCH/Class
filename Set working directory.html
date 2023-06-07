@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>Creo 기본 교육 - 1. 기초 교육</title>
+    <link rel="icon" href="../../favicon.png">
+    <meta charset="utf-8"> 
+    <style>
+     a {
+        color: black;
+        text-decoration: none;
+     }
+     h1 {
+        font-size: 50px;
+        text-align: center;
+        border-width: 7px;
+        border-color: green;
+        border-style: ridge;
+        margin: 0px;
+        padding: 15px;
+     }
+     #active {
+        color: blue;
+     }
+     .saw {
+        color: gray;
+     }
+     #grid {
+        display: grid;
+        grid-template-columns: 300px 1300px 200px;
+        grid-template-areas:
+            "index  main  log"
+    }
+    iframe {
+        position: fixed;
+        border-right: 2px solid green;
+        border-bottom: none;
+        border-left: none;
+        border-top: none;
+        width: 300px;
+        height: 100%;
+        margin: 0px;
+    }
+    @media(max-width :1300px) {
+        #grid {
+            display: block;
+            margin-top: 1000px;
+        }
+        iframe {
+            position: absolute;
+        }    
+    }
+    img {
+        margin: 40px 50px 10px 0px;
+    }
+    body {
+      margin: 0px;
+    }
+    u {
+        color: rgb(51, 104, 51)
+    }
+    </style>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+<p style="margin-top:5px;"></p>
+<h1><a href="CreoBasic.html" style="color: green" title="Creo 기본 교육 메인페이지로 이동">Creo 기본 교육</a></h1>
+<iframe src="CreoBasicIndex.html"></iframe>
+<div id="grid">
+    <div></div>
+    <div style="margin-left:60px;">
+    <p style="margin-top:100px;"></p>
+        <h3><li>작업디렉토리 설정</li></h3>
+        <p style="margin-top:50px;"></p>
+        <p><strong><u>Creo 시작 화면</u></strong></p>
+        <img src="1. Set working Directory/Set working Directory1.png" height="500">
+        <p>작업 디렉토리를 설정하는 방법 중 자주 사용하는 2가지 방법을 알아보겠습니다.</p>
+        <p>Creo를 시작하면 다음과 같은 화면을 볼 수 있습니다.</p>
+        <p>빨간칸의 '작업 디렉토리 선택'을 클릭합니다.</p>
+        <img src="1. Set working Directory/Set working Directory2.png" height="350">
+        <p>작업디렉토리를 설정하면 경로가 고정되어 세이브, 로드 시 매번 경로를 설정할 필요가 없어집니다.</p>
+        <p>부품이 적은 설계는 디렉토리를 설정하지 않아도 무리가 없지만, 부품이 늘어날수록 설계 파일 정리가 불가능합니다.</p>
+        <p>또 시뮬레이션 등 일부 기능들은 작업 디렉토리가 설정되어 있지 않으면 분석을 <u>시작할 수 없으니</u> 주의하시기 바랍니다.</p>
+        <p style="margin-top:70px;"></p>
+        <p>작업 디렉토리를 설정하는 두번째 방법을 따라해 봅시다.</p>
+        <img src="1. Set working Directory/Set working Directory3.png" height="500">
+        <p>'파일 > 세션 관리 > 작업 디렉토리 선택'을 통해서 작업 디렉토리를 설정할 수 있습니다.</p>
+        <p>참고로 Creo는 <u>다운로드 폴더</u>에서 어떤 파일도 읽어올 수 없습니다.</p>
+        <p>때문에 다운 받은 캐드는 꼭 다른 파일로 옴겨줘야 합니다.</p>
+        <img src="1. Set working Directory/Set working Directory4.png" height="350">
+        <p>바탕화면에 '교육 과제'라는 폴더를 만들고 작업 디렉토리로 설정합니다.</p>
+        <p style="margin-top:110px;"></p>
+        <h3><li>열기</li></h3>
+        <p style="margin-top:50px;"></p>
+        <p><strong><u>Creo 시작 화면</u></strong></p>
+        <img src="1. Set working Directory/Set working Directory1.png" height="500">
+        <p>Creo 시작 화면에서 '열기'를 클릭합니다.</p>
+        <p>기본적으로 작업 디렉토리로 선택한 '교육 과제' 폴더가 열리는 것을 볼 수 있습니다.</p>
+        <img src="1. Set working Directory/Set working Directory5.png" height="50">
+        <p>'열기'는 '파일 > 열기'나 '빠른 엑세스 도구 모음'에서도 사용하실 수 있습니다. </p>
+        <P>Creo는 Step, Stl, obj나 타사의 파일 형식 등 다양한  파일 형식을 지원합니다.</P>
+        <p style="margin-top:110px;"></p>
+        <h3><li>새로 만들기</li></h3>
+        <p style="margin-top:50px;"></p>
+        <p><strong><u>Creo 시작 화면</u></strong></p>
+        <img src="1. Set working Directory/Set working Directory1.png" height="500">
+        <p>Creo 시작 화면에서 '새로 만들기'를 클릭합니다.</p>
+        <p>'새로 만들기' 또한 '파일 > 새로 만들기'나 '빠른 엑세스 도구 모음'에서도 사용하실 수 있습니다. </p>
+        <img src="1. Set working Directory/Set working Directory6.png" height="50">
+        <p>'새로 만들기'를 클릭하면 아래와 같은 창이 생성됩니다.</p>
+        <img src="1. Set working Directory/Set working Directory7.png" height="400">
+        <p>먼저 설계하고자 하는 CAD 유형을 선택합니다.</p>
+        <p>유형을 부품으로, 하위 유형을 솔리드로 선택하고 '기본 템플릿 사용' 체크를 해제합니다.</p>
+        <p>2D 도면은 '드로잉', 조립은 '어셈블리', 판금설계는 '판금'을 선택해야 해당 기능을 활성화 하여 설계할 수 있습니다.</p>
+        <p>판금 설계는 절곡, 곡률 등의 개념이 들어가 일반 설계와 다른 툴이 필요합니다.</p>
+        <p>판금 교육이 필요하신 분들은 <a href="아직 미정.html" class="saw" id="active">'판금 설계 교육'</a>을 참고하시기 바랍니다.</p>
+        <img src="1. Set working Directory/Set working Directory8.png" height="400">
+        <p>템플릿을 선택합니다.</p>
+        <p>mmns는 단위계로 길이(mm) 힘(N) 시간(s)입니다. abs는 정확도로 절대 정확도(abs), 상대 정확도(rel)의 줄임말입니다. </p>
+        <p>우리가 흔히 사용하는 0.001mm 같은 단위가 절대 정확도입니다.</p>
+        <p>상대 정확도는 가장 큰 부품 대비 정확도입니다.
+        <p>항공기처럼 매우 큰 최종품과 거기에 들어가는 작은 볼트들의 관계에는 상대 정확도를 사용하는게 유리합니다.
+        <p>항공기에는 최소 20만개 이상의 부품이 들어가기 때문입니다.</p>
+        <p style="margin-top:110px;"></p>
+        <h3><li>인터페이스 위치</li></h3>
+        <p style="margin-top:50px;"></p>
+        <p><strong><u>설계 기본 화면</u></strong></p>
+        <img style="border-width: 0px;" src="1. Set working Directory/Set working Directory9.png" height="470">
+        <p>새로 만들기를 진행하면 다음과 같은 화면을 볼 수 있습니다.</p>
+        <P>수업을 따라오려면 인터페이스 위치를 알아야하기 때문에 일단 대략적인 위치를 기억해 두시기 바랍니다.</P>
+        <img src="1. Set working Directory/Set working Directory10.png" height="80">
+        <p>① 리본</p>
+        <p>&nbsp : 리본은 탭과 그룹으로 이루어져 있습니다. 모든 기능이 이 리본에 모여있습니다.</p>
+        <img src="1. Set working Directory/Set working Directory11.png" height="25">
+        <p>② 탭</p>
+        <p>&nbsp : 탭은 유사한 기능 별로 나눈 대분류입니다.</p>
+        <img src="1. Set working Directory/Set working Directory12.png" height="100">
+        <p>③ 그룹</p>
+        <p>&nbsp : 그룹은 유사한 기능 별로 나눈 소분류입니다.</p>
+        <p>&nbsp  이제 기능의 위치를 설명 드릴 때 <u>모델 탭 > 형태 그룹 > 밀어내기</u>로 설명드리겠습니다.</p>
+        <img src="1. Set working Directory/Set working Directory13.png" height="30">
+        <p>④ 빠른 도구 모음</p>
+        <p>&nbsp : 새파일, 열기, 저장, Undo, Redo 등을 간편하게 사용할 수 있도록 모아놨습니다.</p>
+        <p>&nbsp  빠른 도구 모음에 사용자가 필요한 도구를 추가할 수도 있습니다.</p>
+        <img src="1. Set working Directory/Set working Directory14.png" height="400">
+        <p>⑤ 모델 트리</p>
+        <p>&nbsp : 모델 트리는 항목 간 관계 또는 해당 항목의 생성 순서를 반영하는 모델의 항목 목록입니다.</p>
+        <p>&nbsp  모델 트리로 그래픽 창에서는 선택할 수 없는 항목들을 선택하기도 하고 관계 설정만 가능하면 생성 순서를 변경할 수 있습니다.</p>
+        <img src="1. Set working Directory/Set working Directory15.png" height="35">
+        <p>⑥ 상태 표시줄</p>
+        <p>&nbsp : 현재 진행 상태를 표시해 줍니다. 진행 상황, 에러, 문제 발생 원인 등을 표시해 줍니다.</p>
+        <p>&nbsp  왼쪽 아이콘을 활용하여 창 가시성 등을 선택할 수 있습니다.</p>
+        <img src="1. Set working Directory/Set working Directory16.png" height="35">
+        <p>⑦ 그래픽 내 도구 모음</p>
+        <p>&nbsp : 그래픽 내 도구 모음답게 디스플레이에 사용되는 기능을 모아놨습니다.</p>
+        <p>&nbsp  사용자가 필요한 도구를 추가할 수도 있습니다.</p>
+        <img src="1. Set working Directory/Set working Directory17.png" height="350">
+        <p>⑧ 그래픽 창</p>
+        <p>&nbsp : 설계자가 작업하는 내용을 그래픽으로 확인하고 수정할 수 있는 작업창입니다.</p>
+        <img src="1. Set working Directory/Set working Directory18.png" height="40">
+        <p>⑨ 선택 필터</p>
+        <p>&nbsp : 그래픽 창에서 선택할 때 필터를 통해 원하는 것만 쉽게 선택할 수 있습니다.</p>
+        <p style="margin-top:110px;"></p>
+        <h3 style="border : solid green; display: inline; padding: 10px;">중간 실습</h3>
+        <p style="margin-top:50px;"></p>
+        <p>간단한 육면체를 생성해 보겠습니다.</p> 
+        <p>이번에 생성하는 모델은 치수가 중요하지 않습니다. 이미지를 보고 편하게 따라하세요.</p>
+        <img src="1. Set working Directory/Set working Directory19.png" height="400">
+        <p><strong>1. 그래픽 창에서 Front 평면을 선택하고 '모델 탭 > 형태 그룹 > 밀어내기'를 선택합니다.</strong></p>
+        <p>(만약 면에 이름이 표시되지 않는다면 config 설정이 안되 있어서 그렇습니다. 이럴 땐 모델트리에서 Front 면을 선택해도 됩니다)</p>
+        <img src="1. Set working Directory/Set working Directory20.png" height="400">
+        <p>위와 같이 탭이 자동으로 '스캐치 탭'으로 변경되고 '밀어내기 탭'은 비활성화 되는 것을 볼 수 있습니다.</p>
+        <p>이는 밀어내기를 사용하기 위해서는 베이스가 되는 스캐치가 필요하기 때문입니다.</p>
+        <p>편한 스캐치를 위해 Front면을 정면에 위치시키겠습니다.</p>
+        <p>저는 config가 설정되어 있기 때문에 스케치가 시작되면 자동으로 스캐치면의 정면으로 이동합니다.</p>
+        <p><strong>2. 자동으로 화면이 이동하지 않는 분들은 '그래픽 내 도구 모음'의 '스캐치 보기'를 클릭합니다.</strong></p>
+        <img src="1. Set working Directory/Set working Directory21.png" height="400">
+        <p><strong>3.'스캐치 탭 > 스캐치 그룹 > 직사각형'을 클릭합니다. </strong></p>
+        <p><strong>4. 그래픽 창에 다음과 같은 직사각형을 생성합니다.(치수는 중요하지 않습니다.)</strong></p>
+        <p><strong>&nbsp 좌클릭으로 직사각형 시작, 좌클릭으로 직사각형을 마무리하고, 휠 클릭으로 직사각형을 종료합니다.</strong></p>
+        <p><strong>&nbsp 실수한 부분이 있으면 undo를 통해 다시 돌아가서 수정하면 됩니다.(undo : ctrl+z)</strong>
+        <p>위와 같이 직사각형이 생성됐으면 확인을 클릭합니다.</p>
+        <img src="1. Set working Directory/Set working Directory22.png" height="50">
+        <p>다른 작업도 설정할 때 위와 같은 아이콘이 '확인'이니 참고하시기 바랍니다.</p>
+        <img src="1. Set working Directory/Set working Directory23.png" height="400">
+        <p>이제 밀어내기를 위한 베이스 스캐치가 있으므로 자동으로 '밀어내기 탭'으로 이동하는 것을 볼 수 있습니다.</p>
+        <p><strong>5.'깊이를 300'으로 입력하고 '확인'을 클릭합니다.</strong></p>
+        <img src="1. Set working Directory/Set working Directory24.png" height="300">
+        <p>다음과 같은 솔리드(밀어내기)가 생성된 것을 확인할 수 있습니다.</p>
+        <p style="margin-top:110px;"></p>
+        <h3><li>화면 방향 조정</li></h3>
+        <p style="margin-top:50px;"></p>
+        <p><strong><u>기본 화면 회전법</u></strong></p>
+        <p>화면 줌인, 줌아웃은 휠을 회전하여 조정합니다.</p>
+        <img src="1. Set working Directory/Set working Directory25.png" height="50">
+        <p>'그래픽 창 내 도구 모음'에서 줌인, 줌아웃 할 수 있습니다.</p>
+        <p>가장 왼쪽 아이콘인 '전체 표시'는 모델의 모든 부품이 보일 수 있는 크기와 위치로 화면을 줌아웃합니다.</p>
+        <img src="1. Set working Directory/Set working Directory26.png" height="350">
+        <P>화면을 회전하려면 마우스 휠 버튼을 누르고 움직이면 됩니다.</P>
+        <p>휠 버튼을 누르고 마우스를 움직여봅시다.</p>
+        <p>그리고 '그래픽 창 내 도구 모음'에 '회전 중심'을 클릭합니다.</p>
+        <p>다시 휠 버튼을 누르고 마우스를 움직여봅시다</p>
+        <p>두 회전의 차이를 느끼셨나요?</p>
+        <p style="margin-top:50px;">'회전 중심' 비활성화 회전은 마우스 휠이 클릭된 위치를 중심으로 회전합니다.</p>
+        <p>'회전 중심'이 활성화된 상태에서 회전은 모델의 부피 중심에서 회전합니다.</p>
+        <p>대부분의 상황이 회전 중심 활성화된 상태로 회전하시는 편이 편하실겁니다.</p>
+        <p>회전 중심 활성화 상태에서도 'Ctrl + 휠'을 하면 커서 중심의 회전을 할 수 있으니 적절히 활용하시면 좋습니다.</p>
+        <p style="margin-top:50px;">'Shift + 휠'을 하면 마우스가 이동하는 방향으로 화면이 이동합니다. </p>
+        <p>위 요약표를 보고 화면을 자유롭게 이동해봅시다.</p>
+        <img src="1. Set working Directory/Set working directory.gif" height="400">
+        <p>수고하셨습니다.</p>
+        <p style="margin-top:80px;"></p>
+    <h3><a href="CreoBasic.html" title="Creo 기본 교육 메인페이지로 이동" class="saw" id="active">Creo 기본 교육 페이지로 돌아가기</a></h3>
+    </div>
+    <div></div>
+</div>
+</body>
+</html>

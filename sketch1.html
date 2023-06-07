@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>Creo 기본 교육 - 5. 스케치1</title>
+    <link rel="icon" href="../../favicon.png">
+    <meta charset="utf-8"> 
+    <style>
+     a {
+        color: black;
+        text-decoration: none;
+     }
+     h1 {
+        font-size: 50px;
+        text-align: center;
+        border-width: 7px;
+        border-color: green;
+        border-style: ridge;
+        margin: 0px;
+        padding: 15px;
+     }
+     img {
+        margin: 40px 50px 10px 0px;
+        border: 1px solid;
+        
+    }
+    body {
+      margin: 0px;
+    }
+    u {
+        color: rgb(51, 104, 51)
+    }
+     #active {
+        color: blue;
+     }
+     .saw {
+        color: gray;
+     }
+     #grid {
+        display: grid;
+        grid-template-columns: 300px 1300px 200px;
+        grid-template-areas:
+            "index  main  log"
+    }
+    iframe {
+        position: fixed;
+        border-right: 2px solid green;
+        border-bottom: none;
+        border-left: none;
+        border-top: none;
+        width: 300px;
+        height: 100%;
+        margin: 0px;
+    }
+    @media(max-width :1300px) {
+        #grid {
+            display: block;
+            margin-top: 1000px;
+        }
+        iframe {
+            position: absolute;
+        }    
+    }
+    </style>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+<p style="margin-top:5px;"></p>
+<h1><a href="CreoBasic.html" style="color: green" title="Creo 기본 교육 메인페이지로 이동">Creo 기본 교육</a></h1>
+<iframe src="CreoBasicIndex.html"></iframe>
+<div id="grid">
+    <div></div>
+    <div style="margin-left:80px;">
+    <p style="margin-top:100px;"></p>
+        <h3><li>스케치</li></h3>
+        <p style="margin-top:80px;"></p>
+        <h3 style="border : solid green; display: inline; padding: 10px;">중간 실습</h3>
+        <p style="margin-top:50px;"></p>
+        <p>'스케치 전용 파일'을 생성해보겠습니다.</p> 
+        <p>스케치 전용 파일은 밀어내기 등으로 3D 형상을 만들 수 없지만, 후에 여러 파일에 참조 스케치로 불러와 사용할 수 있습니다.</p>
+        <p>만약 여기저기 동일하게 사용되는 스케치가 있다면 스케치 파일로 작성 후 필요할 때마다 불러오는 것이 매번 스케치를 작성하는 수고를 덜 수 있습니다.</p>
+        <img style= "border :none;" src="1. Set working Directory/Set working Directory6.png" height="60">
+        <p><strong>1. 새로 만들기.</strong></p>
+        <p>('파일  > 새로 만들기' 혹은 '빠른 도구 모음'에서)</p>
+        <img src="5. sketch/sketch1.png" height="360">
+        <p><strong>2. 유형을 스케치로 선택하고 확인을 선택합니다.</strong></p>
+        <p>스케치는 하위 유형, 템플릿(template)이 없습니다.</p>
+        <p>그렇기 때문에 mm/N/s 단위에서도 Inch/F/s 단위에서도 참조 스케치로 불러올 수 있습니다.</p>
+        <img src="5. sketch/sketch2.png" height= "500">
+        <p>위와 같이 기준 평면(front, top, right) 없는 그래픽 창이 보입니다.</p>
+        <p>기준 평면이 생기면 스케치를 다양한 면에 적용하기 어렵기 때문에 그렇습니다.</p>
+        <img src="5. sketch/sketch3.png" height= "500">
+        <p><strong>3. '스케치 탭 > 스케치 그룹 > 중심선'으로 다음과 같이 중심선을 두개 만들어 줍니다. (서로 직각)</strong></p>
+        <p><strong>&nbsp 임의 공간을 좌클릭하고 오른쪽 수평으로 이동하여 좌클릭, 다시 위쪽 임임의 공간을 좌클릭 후 아래 수직으로 이동하여 좌클릭합니다.</strong></p>
+        <p><strong>&nbsp 휠클릭으로 중심선 기능을 종료합니다.</strong></p>
+        <p>&nbsp<u>'기준 그룹의 > 중심선'</u>과 다릅니다. 기준 그룹의 중심선은 3D 공간의 중심선입니다.</p>
+        <p>중심선을 만들어 준 이유는 스케치를 할 때 중심 위치로 사용할 수 있고, 다른 면에 스케치를 불러올 때 정렬의 기준이 됩니다.</p>
+        <img src="5. sketch/sketch28.png" height= "100">
+        <img style= "border :none;" src="5. sketch/sketch4.png" height= "440">
+        <P>'스케치 탭 > 스케치 그룹'에는 다양한 스케치 도구가 있습니다.</P>
+        <p>위 표를 참고하여 여러 도형을 생성해봅시다.</p>
+        <img src="5. sketch/sketch5.png" height= "500">
+        <p><strong>4. '스케치 탭 > 스케치 그룹 > 선' 을 클릭합니다.</strong></p>
+        <p><strong>&nbsp 좌클릭으로 선을 시작한 후 선 끝 위치에서 한번 더 좌큰릭합니다. 그리고 휠클릭하여 종료합니다.</strong></p>
+        <p><strong>&nbsp 다시 한번 임의의 위치에서 좌클릭으로 선을 시작한 후 선 끝 위치에서 좌클릭합니다.</strong></p>
+        <p><strong>&nbsp 이번에는 휠을 두번 클릭합니다.</strong></p>
+        <p>&nbsp 선을 휠클릭으로 종료하지 않으면 선의 끝점이 다른 선의 시작점이 됩니다.</p>
+        <p>&nbsp 휠을 한번 더 클릭하면 '선 기능'을 종료합니다.</p>
+        <p>&nbsp 위 사용법이 익숙해질 때까지 반복합니다.</p>
+        <img style= "border :none;" src="5. sketch/sketch6.png" height= "440">
+        <p><strong>5. '스케치 탭 > 스케치 그룹 > 원' 을 클릭합니다.</strong></p>
+        <p><strong>&nbsp 좌클릭으로 원을 시작한 후 원 반지름 위치에서 한번 더 좌클릭합니다.</strong></p>
+        <p><strong>&nbsp 휠을 클릭하면 원 기능이 종료됩니다.</strong></p>
+        <img src="5. sketch/sketch8.png" height= "100">
+        <p><strong>5. '원' 기능 옆에 드롭다운을 클릭하고 '동심원'을 클릭합니다.</strong></p>
+        <img style= "border :none;" src="5. sketch/sketch7.png" height= "410">
+        <p><strong>6. 기존에 생성한 원을 클릭합니다. (원 중심이 아닙니다.) 다시 한번 좌클릭과 휠로 생성합니다.</strong></p>
+        <img style= "border :none;" src="5. sketch/sketch9.png" height= "440">
+        <p><strong>7. '삼점원'을 생성해 봅시다. 원이 통과할 3점을 좌클릭하면 됩니다.</strong></p>
+        <img style= "border :none;" src="5. sketch/sketch10.png" height= "440">
+        <p><strong>8. '선' 기능 옆 드롭다운을 클릭하고 '선 탄젠트'를 클릭합니다.</strong></p>
+        <p><strong>&nbsp '탄젠트 선'을 만드는 기능이기 때문에 곡률을 가진 스케치가 두개 필요합니다.</strong></p>
+        <p><strong>&nbsp 두 원을 클릭해 이미지 같이 선을 만듭니다.</strong></p>
+        <img style= "border :none;" src="5. sketch/sketch1.gif" height= "400">
+        <p><strong>9. 이번에는 여태까지 생성한 스케치를 모두 선택해봅시다.</strong></p>
+        <p><strong>&nbsp 'Ctrl+'로 하나하나 클릭해서 선택하는 방법도 있지만, 드레그를 통해 전부 선택해 줄 수 있습니다. </strong></p>
+        <p>&nbsp <strong><u>좌 > 우</u></strong>로 드레그 하면 드레그 안에 전체가 포함되는 스케치만 선택됩니다. <strong><u>우 > 좌</u></strong>로 드레그하면 드레그에 일부 포함되는 스케치도 포함됩니다.</p>
+        <p>(중심선을 무한대의 개념이기 때문에 일부만 포함되도 선택되기도 합니다. 'Ctrl+'로 중심선은 제외해줍니다.)</p>
+        <img style= "border :none;" src="5. sketch/sketch11.png" height= "350">
+        <p><strong>10. 'Del'키를 눌러 선택한 스케치를 지워줍니다.</strong></p>
+        <img style= "border :none;" src="5. sketch/sketch12.png" height= "350">
+        <p><strong>11. '선'을 이용해 다음과 같이 스케치합니다.</strong></p>
+        <img style= "border :none;" src="5. sketch/sketch13.png" height= "350">
+        <p><strong>12. '스케치 탭 > 스케치 그룹 > 필렛'을 클릭합니다.</strong></p>
+        <p><strong>&nbsp 오른쪽 모서리의 두 수직 선을 클릭해 필렛을 적용해 줍니다. </strong></p>
+        <img style= "border :none;" src="5. sketch/sketch14.png" height= "330">
+        <p><strong>13. '스케치 탭 > 스케치 그룹 > 모따기'를 클릭합니다.</strong></p>
+        <p><strong>&nbsp 오른쪽 모서리의 두 수직 선을 클릭해 모따기를 적용해 줍니다. </strong></p>
+        <p>&nbsp (클릭 위치가 필렛과 모따기의 위치를 결정합니다.)</p>
+        <p style="margin-top:50px;">아래 표를 참고하여 여러 스케치를 연습해봅시다.</p>
+        <img style= "border :none;" src="5. sketch/sketch4.png" height= "440">
+        <p style="margin-top:70px;">연습을 마무리하고 '닫기'를 눌렀다면 '표시되지 않은 항목 지우기'를 클릭하는 습관을 만듭시다.</p>
+        <img src="2. mapkey/Mapkey30.png" height="400">
+        <p style="margin-top:110px;"></p>
+
+        <h3><li>스케치 디스플레이 옵션</li></h3>
+        <p style="margin-top:70px;"></p>
+        <p>'그래픽 내 도구모음'은 상황에 따라 바뀝니다.</p> 
+        <p>어떤 작업 중인지, 파일 형식이 뭔지에 따라 관련 디스플레이 도구들로 자동 변경됩니다.</p>
+        <img style= "border : none;" src="5. sketch/sketch18.png" height= "150"> <img style= "border : none;" src="5. sketch/sketch15.png" height= "150">
+        <p>필요에 따라 적절하게 디스플레이를 설정하시기 바랍니다.</p>
+        <p>아래 이미지를 참조하여 자신의 스타일에 맞는 작업환경을 구성해봅시다.</p>
+        <img style= "border : none;" src="5. sketch/sketch19.png" height= "300">
+        <img style= "border :none;" src="5. sketch/sketch16.png" height= "270"><img style= "border :none;" src="5. sketch/sketch17.png" height= "270">
+        <p style="margin-top:110px;"></p>
+
+        <h3><li>제약 조건 활용</li></h3>
+        <p style="margin-top:50px;"></p>
+        <img style= "border : none;" src="5. sketch/sketch20.png" height= "460">               
+        <p>'스케치 탭 > 구속 그룹'에 제약 기능들이 있습니다.</p>
+        <P>스케치 실습 중 대부분이 자동으로 제약이 걸리는 것을 느끼셨을 겁니다. (스내핑)</P>
+        <p>만약 스내핑이 되지 않았다면 '파일 > 옵션'에서 '코어 > 스케쳐' 카테고리로 가시면 자세히 세팅할 수 있습니다.</p>
+        <img src="5. sketch/sketch21.png" height= "500">
+        <p>스케치 제약 조건을 설정해두면 치수 변경 시 아래와 같이 원치 않는 형상 변경이 발생하지 않습니다. </p>
+        <img style= "border : none;" src="5. sketch/sketch22.png" height= "300"><img style= "border : none;" src="5. sketch/sketch23.png" height= "300">
+        <p style="margin-top:100px;"></p>
+        <h3 style="border : solid green; display: inline; padding: 10px;">중간 실습</h3>
+        <p style="margin-top:50px;"></p>
+        <p>제약 조건을 활용해 아래와 같은 형상을 만들어 보겠습니다. </p>
+        <p>치수는 중요하지 하지 않으므로 형상과 비율만 비슷하게 따라하시기 바랍니다.</p>
+        <img style= "border : none;" src="5. sketch/sketch24.png" height= "200">
+        <img style= "border : none;" src="5. sketch/sketch25.png" height= "200">
+        <p><strong>1. '스케치 유형'을 새로 만듭니다.</strong></p>
+        <img src="5. sketch/sketch27.png" height= "150">
+        <p><strong>2. 스케치 디스플레이를 위와 동일하게 설정합니다. (치수, 격자만 체크해제)</strong></p>
+        <p>'그래픽 내 도구모음'에 디스플레이 설정 옵션이 있습니다. 추후에는 안내드리지 않습니다.</p>
+        <img style= "border : none;" src="5. sketch/sketch26.png" height= "300">
+        <p><strong>3. '스케치 탭 > 스케치 그룹 > 선'을 선택하고 위와 유사하게 스케치합니다.</strong></p>
+        <p><strong>&nbsp&nbsp 이때 주의점은 스내핑에 의한 제약 조건 생성이 없어야 합니다.</strong></p>
+        <p>만약 스내핑으로 인해 제약 조건이 걸렸다면, 제약조건을 클릭하고 'Del'로 삭제하거나 설정에서 스내핑을 꺼주시기 바랍니다.</p>
+        <img src="5. sketch/sketch29.png" height= "100">
+        <p><strong>4. '스케치 탭 > 구속 그룹 > 평행'을 선택하고 아래 두 선(초록색)을 클릭합니다. </strong></p>
+        <img style= "border :none;" src="5. sketch/sketch30.png" height= "300">
+        <p><strong>5. '스케치 탭 > 구속 그룹 > 수직'을 선택하고 아래 선(초록색)을 클릭합니다. </strong></p>
+        <img style= "border :none;" src="5. sketch/sketch31.png" height= "300">
+        <p><strong>6. '스케치 탭 > 구속 그룹 > 직각'을 선택하고 아래 두 선(초록색)을 클릭합니다. </strong></p>
+        <img style= "border :none;" src="5. sketch/sketch32.png" height= "300">
+        <p><strong>7. '스케치 탭 > 구속 그룹 > 직각'을 선택하고 아래 두 선(초록색)을 클릭합니다. </strong></p>
+        <img style= "border :none;" src="5. sketch/sketch33.png" height= "300">
+        <p><strong>8. 아래와 같이 완성됐는지 확인합니다. </strong></p>
+        <img style= "border :none;" src="5. sketch/sketch34.png" height= "300">
+        <p>실습해보면 각 제약의 의미는 알고 있으나, 적절히 사용하기 위해서는 연습이 필요하다는걸 알 수 있습니다.</p>
+        <p style="margin-top:60px;"></p>
+        <p>두 번째 실습 이어가 보겠습니다.</p>
+        <p><strong>1. '휠+마우스' 움직임을 통해 화면을 충분히 이동합니다.</strong></p>
+        <img style= "border :none;" src="5. sketch/sketch35.png" height= "350">
+        <p><strong>2. 빈 공간에 위와 같이 스케치를 합니다.</strong></p>
+        <p><strong>&nbsp&nbsp 주의점1 : 원들의 제약 조건이 없을 것 (중심선은 수직, 수평 제약 있음)</strong></p>
+        <p><strong>&nbsp&nbsp 주의점2 : '스케치 탭 > 스케치 그룹 > 중심선'으로 중심선 작성할 것</strong> (기준 탭 > 중심선 X)</p>
+        <p>실력 향상을 위해 앞에서 설명한 내용은 자세히 설명하지 않습니다. </p>
+        <p>진행이 어렵다면 앞수업들을 다시 진행해 주시기 바랍니다.</p>
+        <img src="5. sketch/sketch36.png" height= "100">
+        <p><strong>3. '스케치 탭 > 구속 그룹 > 같음'을 선택하고 아래 두 원(초록색)을 클릭합니다.</strong></p>
+        <img style= "border :none;" src="5. sketch/sketch37.png" height= "300">
+        <p><strong>4. '스케치 탭 > 구속 그룹 > 수평'을 선택하고 아래 두 원의 중심점을 클릭합니다.</strong></p>
+        <img style= "border :none;" src="5. sketch/sketch38.png" height= "300">
+        <p><strong>5. '스케치 탭 > 구속 그룹 > 일치'을 선택하고 아래 '한 원의 중심점'과 '수평 중심선'을 클릭합니다.</strong></p>
+        <img style= "border :none;" src="5. sketch/sketch39.png" height= "300">
+        <p><strong>6. 아래와 같이 완성됐는지 확인합니다. </strong></p>
+        <img style= "border :none;"src="5. sketch/sketch40.png" height= "300">
+        <p><strong>7. 스케치를 눌러 제약 상태에서 변경할 수 있는 범위를 확인할 수 있습니다. </strong></p>
+        <img style= "border :none;"src="5. sketch/sketch40-1.png" height= "300">
+        <p><strong>오른쪽 원 '좌클릭'을 유지한 상태에서 드레그하여 원의 크기를 변경해봅시다. </strong></p>
+        <p><strong>제약 조건에 의해 좌우 원은 같기(=) 때문에 동일한 크기를 유지합니다</strong></p>
+        <img style= "border :none;"src="5. sketch/sketch40-2.png" height= "300">
+        <p><img style= "border :none;"src="5. sketch/sketch40-3.png" height= "300"></p>
+        <p><strong>8. 위와 같이 같음(=) 제약을 선택 후 'Del'키를 누르면 제약 조건이 삭제됩니다. </strong></p>
+        <p><strong>&nbsp&nbsp 다시 한번 원을 드레그하여 원의 크기가 어떻게 변하는지 확인해 봅시다.</strong></p>
+        <img style= "border :none;"src="5. sketch/sketch40-4.png" height= "300">
+        <p><strong>9. 이번에는 원의 위치를 변경해 보겠습니다. 오른쪽 '원의 중심'을 드레그하여 위치를 변경합니다.</strong></p>
+        <p><strong>&nbsp&nbsp일치 옵션에 의해 중심선을 벗어날 수 없는 것을 알 수 있습니다.</strong></p>
+        <img style= "border :none;"src="5. sketch/sketch40-5.png" height= "300">
+        <p><strong>10. 제약 조건을 제거하고 다음과 같이 원을 이동합니다. </strong></p>
+        <p style="margin-top:50px;"></p>
+        <p>다른 스케치와 제약 조건을 충분히 연습한 후 파일을 닫습니다.</p>
+        <p>연습을 마무리하고 '닫기'를 눌렀다면 '표시되지 않은 항목 지우기'를 클릭하는 습관을 만듭시다.</p>
+        <p style="margin-top:110px;"></p>
+        <h3><li>치수 제어 및 충돌 해결</li></h3>
+        <p style="margin-top:50px;"></p>
+        <img src="5. sketch/sketch41.png" height= "100">
+        <p>이번에는 치수를 활용해 보겠습니다.</p>
+        <p>'스케치 탭 > 치수 그룹'에 관련 기능들이 있습니다.</p>
+        <p style="margin-top:60px;"></p>
+        <h3 style="border : solid green; display: inline; padding: 10px;">중간 실습</h3>
+        <p style="margin-top:50px;"></p>
+        <p>제약 조건과 치수를 적절히 활용해 스케치를 진행해 보겠습니다.<p>
+        <p><strong>1. '스케치 유형'을 새로 만듭니다.</strong></p>
+        <img style= "border : none;" src="5. sketch/sketch42.png" height= "200">
+        <p><strong>2. 스케치 디스플레이를 위와 같이 설정합니다.</strong></p>
+        <img style= "border : none;" src="5. sketch/sketch43.png" height= "400">
+        <p><strong>3. '스케치 탭 > 스케치 그룹 > 중심선'으로 위와 같이 생성합니다. (제약 조건까지 동일하게 스케치)</strong></p>
+        <img style= "border : none;" src="5. sketch/sketch44.png" height= "400">
+        <p><strong>4. '스케치 탭 > 스케치 그룹 > 원'으로 위와 같이 생성합니다. (제약 조건까지 동일하게 스케치)</strong></p>
+        <p><strong>&nbsp&nbsp 제약 조건을 보면 한 윈은 중심이 정중앙에, 다른 원은 중심이 수평 중심선 위에 위치하는 것을 알 수 있습니다.</strong></p>
+        <p><strong>&nbsp&nbsp 또 두 원은 서로 같지(=) 않습니다. 서로 크기가 다른 원입니다.</strong></p>
+        <img src="5. sketch/sketch45.png" height= "100">
+        <p>여기까지 진행 시 자동으로 치수가 생성된 분들도 있고, 치수가 없는 분들도 있을 겁니다.</p>
+        <p><strong>5. 치수가 없는 분들은 '스케치 탭 > 치수 그룹 > 치수'를 클릭합니다.</strong></p>
+        <img style= "border : none;" src="5. sketch/sketch46.png" height= "400">
+        <p><strong>6. 치수가 활성화된 상태에서 원을 '좌클릭' 후 치수를 생성하고 싶은 곳에 '휠클릭'합니다.</strong></p>
+        <p><strong>&nbsp&nbsp 다른 원도 동일하게 치수를 생성해 줍니다.</strong></p>
+        <p><strong>7. 치수가 활성화된 상태에서 각 원의 중심을 '좌클릭' 후 치수를 생성하고 싶은 곳에 '휠클릭'합니다.</strong></p>
+        <img style= "border : none;" src="5. sketch/sketch47.png" height= "400">
+        <p><strong>8. 위와 같이 치수들이 생성됐는지 확인합니다. (치수는 달라도 됩니다.)</strong></p>
+        <img style= "border : none;" src="5. sketch/sketch48.png" height= "300"><img style= "border : none;" src="5. sketch/sketch49.png" height= "300">
+        <p><strong>9. 치수를 더블클릭 하여 기존 치수를 지우고 원하는 치수를 기입합니다. 수정 후 '휠버튼'을 눌러 종료합니다.</strong></p>
+        <img style= "border : none;" src="5. sketch/sketch50.png" height= "400">
+        <p><strong>10. 위와 같이 치수를 수정합니다.</strong></p>
+        <img style= "border : none;" src="5. sketch/sketch51.png" height= "400">
+        <p><strong>11. '스케치 탭 > 스케치 그룹 > 선'을 위와 같이 생성합니다.</strong></p>
+        <p><strong>&nbsp&nbsp 위 선들에 적용된 제약은 양쪽 원에 '일치' 제약뿐입니다.</strong></p>
+        <p><strong>&nbsp&nbsp 스내핑 때문에 다른 제약 조건을 피할 수 없다면 생성 후 다른 제약 조건을 'Del'로 삭제하여 위와 동일하게 만들어 줍니다.</strong></p>
+        <p><strong>&nbsp&nbsp 위 이미지와 <u>거의 동일</u>하게 선을 생성해 주셔야됩니다.(선 시작과 끝 위치 주의)</strong></p>
+        <img style= "border : none;" src="5. sketch/sketch52.png" height= "400">
+        <p><strong>12. '스케치 탭 > 구속 그룹 > 탄젠트'를 클릭하고 원과 선을(초록색) 클릭해줍니다.</strong></p>
+        <img style= "border : none;" src="5. sketch/sketch53.png" height= "400">
+        <p><strong>13. 반대쪽 원과 선에도 탄젠트를 적용해 줍니다. </strong></p>
+        <img style= "border : none;" src="5. sketch/sketch54.png" height= "400">
+        <p><strong>14. 아래선에도 동일하게 탄젠트를 적용해 줍니다. </strong></p>
+        <p><strong>&nbsp&nbsp 탄젠트 적용에서 막히신 분들은 11번을 자세히 확인하고 11번부터 다시 시작하시기 바랍니다. </strong></p>
+        <img style= "border : none;" src="5. sketch/sketch55.png" height= "400">
+        <p><strong>15. '스케치 탭 > 스케치 그룹 > 선'을 위와 같이 생성합니다. (선이 가진 제약조건은 일치, 수직입니다.) </strong></p>
+        <img style= "border : none;" src="5. sketch/sketch56.png" height= "400">
+        <p><strong>16. '스케치 탭 > 치수 그룹 > 치수'를 선택하고, 이미지의 적색원 부분을 클릭하여 치수를 생성합니다. </strong></p>
+        <img style= "border : none;" src="5. sketch/sketch57.png" height= "400">
+        <p><strong>17. 치수를 수정하여 이미지와 동일한 스케치를 생성합니다. </strong></p>
+        <p><strong>&nbsp&nbsp 치수의 위치는 '좌클릭' 드레그를 통해 위치를 변경할 수 있습니다. </strong></p>
+        <p><strong>&nbsp&nbsp '치수 기능'이 활성화된 상태에서는 변경이 안되니 '휠버튼'으로 비활성화 후 진행하세요. </strong></p>
+        <p style="margin-top:80px;"></p>
+        <p>혹시 실습을 따라오지 못하신 분들은 동영상을 확인하시기 바랍니다.</p>
+        <video src="5. sketch/sketch1.mp4" height="600" controls></video>
+        <p style="margin-top:110px;"></p>
+        <img style= "border : none;" src="6. sketch2/sketch78.png" height= "300"><img style= "border : none;" src="6. sketch2/sketch77.png" height= "350">
+        <p>치수, 제약 조건들을 이용해 설계를 진행하다 보면, 간혹 중복되는 조건들로 인해 충돌하는 경우가 있습니다.</p>
+        <p>Creo에서는 이를 자동으로 감지해서 '스케치 해결' 창으로 충돌과, 충돌 조건들을 알려줍니다.</p>
+        <p>또 그래픽 창에서는 충돌을 일으키는 조건을 녹색으로 강조해 줍니다.</p>
+        <p>충돌을 일으키는 조건들을 잘 살펴보시고 불필요한 조건을 '삭제'해 주시면 됩니다.</p>
+        <p style="margin-top:70px;"></p>
+        <p style="margin-top: 30px;">수고하셨습니다.</p>
+        <p style="margin-top:80px;"></p>
+    <h3><a href="CreoBasic.html" title="Creo 기본 교육 메인페이지로 이동" class="saw" id="active">Creo 기본 교육 페이지로 돌아가기</a></h3>
+    </div>
+    <div></div>
+</div>
+</body>
+</html>

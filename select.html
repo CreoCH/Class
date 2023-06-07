@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>Creo 기본 교육 - 4. 피쳐 선택 및 가시성</title>
+    <link rel="icon" href="../../favicon.png">
+    <meta charset="utf-8"> 
+    <style>
+     a {
+        color: black;
+        text-decoration: none;
+     }
+     h1 {
+        font-size: 50px;
+        text-align: center;
+        border-width: 7px;
+        border-color: green;
+        border-style: ridge;
+        margin: 0px;
+        padding: 15px;
+     }
+     #active {
+        color: blue;
+     }
+     .saw {
+        color: gray;
+     }
+     #grid {
+        display: grid;
+        grid-template-columns: 300px 1300px 200px;
+        grid-template-areas:
+            "index  main  log"
+    }
+    iframe {
+        position: fixed;
+        border-right: 2px solid green;
+        border-bottom: none;
+        border-left: none;
+        border-top: none;
+        width: 300px;
+        height: 100%;
+        margin: 0px;
+    }
+    @media(max-width :1300px) {
+        #grid {
+            display: block;
+            margin-top: 1000px;
+        }
+        iframe {
+            position: absolute;
+        }    
+    }
+    img {
+        margin: 40px 50px 10px 0px;
+    }
+    body {
+      margin: 0px;
+    }
+    u {
+        color: rgb(51, 104, 51)
+    }
+    </style>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+<p style="margin-top:5px;"></p>
+<h1><a href="CreoBasic.html" style="color: green" title="Creo 기본 교육 메인페이지로 이동">Creo 기본 교육</a></h1>
+<iframe src="CreoBasicIndex.html"></iframe>
+<div id="grid">
+    <div></div>
+    <div style="margin-left:60px;">
+    <p style="margin-top:110px;">본 교육을 위해 아래 다운로드를 클릭해 교육용 CAD를 다운로드해 주시기 바랍니다.</p>
+    <p>이 파일은 최소 Creo 5.0 이상 버전을 위한 것으로 그 이하 버전에서는 정상적으로 열리지 않습니다. </p>
+    <P style="margin-top:30px;"></P>
+    <a href="https://pobisgroup-my.sharepoint.com/:f:/g/personal/ch_lee_dimoa_co_kr/Equo2E-5dZZJspSeR_v_ba8BDi-GBU9E7mq1kqdNVT6txQ?e=3RjqYt" target="_blank" style="border: solid red 4px; font-size: 20px;"> 다운로드</a>
+    <p style="margin-top:110px;"></p>
+        <h3><li>그래픽 창에서 선택</li></h3>
+        <p style="margin-top:50px;"></p>
+        <p><strong><u>그래픽 창</u></strong></p>
+        <img src="4. select/select1.png" height="200">
+        <p style="margin-top: 30px;">이미지에 보이는 서피스를 선택해 수정하려고 합니다.</p>
+        <p>마우스를 가져가면 좌클릭을 통해 선택될 피쳐를 미리 주황색으로 강조해 줍니다.</p>
+        <p>주황색 강조를 통해 좌클릭을 하면 어떤 피쳐가 선택될지 미리 파악할 수 있습니다.</p>
+        <img src="4. select/select2.png" height="200"><img src="4. select/select3.png" height="200">
+        <p>좌클릭으로 선택하면 초록색으로 강조해 줍니다.</p>
+        <li>선택 전, 선택하게 될 피쳐 강조 : <u style="color: rgb(212, 115, 24)">주황색</u></li>
+        <li style="margin-top:20px;">선택 후, 선택된 피쳐 강조 : <u style="color: rgb(5, 116, 33)">초록색</u></li>
+        <p style="margin-top: 70px;">(위에 다운로드 한 파일의 'motor.asm'을 열고 교육 내용을 따라해 보세요.)</p>
+        <p style="margin-top:110px;"></p>
+        <h3><li>순차선택, 모델트리</li></h3>
+        <p style="margin-top:50px;"></p>
+        <img src="4. select/select4.png" height="220">
+        <p style="margin-top: 50px;">만약 다음과 같은 조립품이 있는데, 안에 조립된 피스톤 부품을 선택하고 싶으면 어떻게 해야될까요?</p>
+        <p>혹은 커버 겉면이 아닌 안쪽면을 선택하고 싶을 수도 있습니다.</p>
+        <p style="margin-top:30px;">그럴 때 편하게 선택하는 방법이 있습니다.</p>
+        <p>1) 먼저 선택하려는 부품이나 면이 위치할 것으로 예상되는 지점에 마우스를 위치시킵니다.</p>
+        <p>2) 마우스 우클릭합니다.</p>
+        <p>3) 우클릭할수록 순차적으로 안쪽 서피스가 <u style="color: rgb(212, 115, 24)">선택할 피쳐로 강조</u>되는 것을 볼 수 있습니다.</p>
+        <p>4) 선택하려는 서피스가 강조되면 그때 좌클릭해  <u style="color: rgb(5, 116, 33)">선택</u>해 주시면 됩니다.</p>
+        <img style= "border: solid black 1px;" src="4. select/select.GIF" height="400">
+        <p>위와 같이 순차 선택을 통해 안쪽에 있는 서피스나 부품도 쉽게 선택이 가능합니다.</p>
+        <p style="margin-top: 70px;">서피스 말고 파트 전체를 선택할 때가 있습니다.</p>
+        <p>그럴 때는 모델트리에서 파트를 선택하면 됩니다.</p>
+        <img src="4. select/select5.png" height="230"><img src="4. select/select6.png" height="230">
+        <p>모델트리에서만 선택 가능한 피쳐들이 있습니다.</p>
+        <p>예를 들어 일부 서피스가 아닌 '밀어내기' 자체를 선택해야할 때,</p>
+        <p>그래픽 창에서는 밀어내기를 선택할 수 없지만 (밀어내기로 형성된 일부 서피스만 선택됨),</p>
+        <p>모델트리에서 밀어내기를 선택할 수 있습니다.</p>
+        <P style="margin-top: 80px;">파트 수가 많거나, 어셈블리 구조가 복잡해서 모델트리에서 특정 파트를 찾기 어려울 때도 있습니다.</P>
+        <P>그래픽 창과 모델트리는 서로 연개되어 선택 시 강조되기 때문에, 그래픽 창에서 선택 후 모델트리에서 선택해 주시면 됩니다.</P>
+        <img src="4. select/select7.png" height="400">
+        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp- 의자 공압부를 수정하고 싶지만 모델트리 내 파트 위치를 모름 -</p>
+        <img src="4. select/select8.png" height="380">
+        <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp- 그래픽창에서 선택 > 모델트리에 강조 > 모델트리 내 위치 파악 -</p>
+        <p style="margin-top: 50px;"></p>
+        <img src="4. select/select9.png" height="120">
+        <p>또는 파트의 이름을 알고 있다면 '도구 탭 > 조사 그룹 > 찾기' 기능을 활용해 찾을 수 있습니다.</p>
+        <img src="4. select/select10.png" height="320"><img src="4. select/select11.png" height="150">
+        <p>다양한 조건으로 검색 가능하니 필요할 때 활용하시기 바랍니다.</p>
+        <p style="margin-top:110px;"></p>
+        <h3><li>선택 필터 적용</li></h3>
+        <p style="margin-top:50px;"></p>
+        <img src="4. select/select12.png" height="120">
+        <p>오른쪽 하단에 선택 필터를 활용해 보겠습니다.</p>
+        <p>모델에 생성된 기준들을 모두 선택하려 합니다. 모델트리에서 모든 기준들을 찾아 Ctrl+로 하나하나 선택해야합니다.</p>
+        <p>하지만 선택 필터를 '기준'으로 설정해 준다면 기준 외에는 선택할 수 없기 때문에 그래픽 창에서 드래그로 한번에 선택가능합니다.</p>
+        <img src="4. select/select13.png" height="420">
+        <p>- 선택 필터를 형상으로 선택 시 모든 형상이 다 선택됨 -</p>
+        <img src="4. select/select14.png" height="420">
+        <p>- 선택 필터를 기준으로 선택 시 기준들만 선택됨 -</p>
+        <p style="margin-top: 60px;"></p>
+        <p>선택 필터는 모든 모서리에 라운드를 적용할 때, 모든 서피스에 구배를 적용할 때 등 유용하게 사용되는 기능입니다.</p>
+        <p>필요한 순간에 활용할 수 있도록 합시다.</p>
+        <p style="margin-top:110px;"></p>
+        <h3><li>가시성 제어</li></h3>
+        <p style="margin-top:50px;"></p>
+        <img src="4. select/select16.png" height="320">
+        <p>설계나 제품승인서를 위해 가시성을 제어해야 할 때가 있습니다.</p>
+        <img src="4. select/select15.png" height="280">
+        <p>'보기 탭 > 표시 유형 그룹' 이나 '미니 도구 모음'(피쳐 선택 시 활성화)에서 가시성을 제어할 수 있습니다. </p>
+        <p>아래 이미지를 보며 다양한 가시성 제어 방법을 따라해 봅시다.</p>
+        <img src="4. select/select2.gif" height="500">
+        <p>일반적으로 가시도 제어는 세이브 시 저장되는 요소가 아닙니다.</p>
+        <P>지금 설정한 가시도를 세이브에 포함하고 싶다면 '보기 탭 > 표시 유형 그룹 > 상태 저장'을 클릭해 줘야합니다.</P>
+        <img src="4. select/select17.png" height="220">
+        <p style="margin-top: 30px;">수고하셨습니다.</p>
+        <p style="margin-top:80px;"></p>
+    <h3><a href="CreoBasic.html" title="Creo 기본 교육 메인페이지로 이동" class="saw" id="active">Creo 기본 교육 페이지로 돌아가기</a></h3>
+    </div>
+    <div></div>
+</div>
+</body>
+</html>

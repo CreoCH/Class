@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>Creo 기본 교육 - 6. 스케치2</title>
+    <link rel="icon" href="../../favicon.png">
+    <meta charset="utf-8"> 
+    <style>
+     a {
+        color: black;
+        text-decoration: none;
+     }
+     h1 {
+        font-size: 50px;
+        text-align: center;
+        border-width: 7px;
+        border-color: green;
+        border-style: ridge;
+        margin: 0px;
+        padding: 15px;
+     }
+     img {
+        margin: 40px 50px 10px 0px;
+        border: 1px solid;
+        
+    }
+    body {
+      margin: 0px;
+    }
+    u {
+        color: rgb(51, 104, 51)
+    }
+     #active {
+        color: blue;
+     }
+     .saw {
+        color: gray;
+     }
+     #grid {
+        display: grid;
+        grid-template-columns: 300px 1300px 200px;
+        grid-template-areas:
+            "index  main  log"
+    }
+    iframe {
+        position: fixed;
+        border-right: 2px solid green;
+        border-bottom: none;
+        border-left: none;
+        border-top: none;
+        width: 300px;
+        height: 100%;
+        margin: 0px;
+    }
+    @media(max-width :1300px) {
+        #grid {
+            display: block;
+            margin-top: 1000px;
+        }
+        iframe {
+            position: absolute;
+        }    
+    }
+    </style>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+<p style="margin-top:5px;"></p>
+<h1><a href="CreoBasic.html" style="color: green" title="Creo 기본 교육 메인페이지로 이동">Creo 기본 교육</a></h1>
+<iframe src="CreoBasicIndex.html"></iframe>
+<div id="grid">
+    <div></div>
+    <div style="margin-left:80px;">
+    <p style="margin-top:100px;"></p>
+        <h3><li>열림, 닫힘 검사 도구</li></h3>
+        <p style="margin-top:70px;"></p>
+        <p>Creo 스케치에는 열림, 닫힘, 교차라는 개념이 있습니다.</p>
+        <img style= "border : none;" src="6. sketch2/sketch60.png" height= "200">
+        <p>만약 'ㅁ' 형태의 스케치가 있다고 가정해 보겠습니다.</p>
+        <p>이 스케치를 밀어내기해 육면체를 형성해도 비는 곳이 없기 때문에 솔리드를 생성하는데 이상이 없습니다.
+        <p></p><img style= "border : none;" src="6. sketch2/sketch63.png" height= "200">
+        <p>하지만 'ㄷ' 형태의 스케치가 있다면 솔리드는 생성할 수 없을 것 입니다.</p>
+        <p>오직 서피스로 생성할 수 있습니다. 솔리드라는 개념은 부피와 물리력을 가지는 피쳐이기 때문입니다.</p>
+        <img style= "border : none;" src="6. sketch2/sketch60.png" height= "200"> <img style= "border : none;" src="6. sketch2/sketch61.png" height= "200"> <img style= "border : none;" src="6. sketch2/sketch62.png" height= "200">
+        <p></p><img style= "border : none;" src="6. sketch2/sketch63.png" height= "200"> <img style= "border : none;" src="6. sketch2/sketch64.png" height= "200">
+        <p>'ㅁ'을 닫힌 스케치, 'ㄷ'을 열린 스케치라고 합니다.</p>
+        <p>여러분의 스케치가 닫혀 있으면 솔리드 혹은 서피스로 선택하여 피쳐를 생성할 수 있습니다.</p>
+        <p>목표는 닫힌 스케치로 설계했지만 미쳐 파악하지 못한 작업으로 열린 스케치가 된다면 솔리드화 할 수 없습니다.</p>
+        <img style= "border : none;" src="6. sketch2/sketch59.png" height= "100"><img style= "border : none;" src="6. sketch2/sketch58.png" height= "200">
+        <p>때문에 스케치가 설계 의도대로 진행되고 있는지 확인이 필요합니다.</p>
+        <p>'스케치 탭 > 검사 그룹'을 이용해서 스케치를 실시간으로 검사할 수 있습니다.</p>
+        <p>'닫힌 루프 음영처리'를 활성화 하면 닫힌 스케치는 분홍색으로 내부를 채워줍니다.</p>
+        <img style= "border : none;" src="6. sketch2/sketch66.png" height= "250">
+        <p>또 스케치에 겹치는 부분이 있으면 다른 객체 중복으로 인해 열린 스케치로 인식할 수 있습니다.</p>
+        <p>'교차 강조 표시, 중첩 강조 표시'로 중복되는 부분을 미리 확인해 제거해 줄 수 있습니다.</p>
+        <img style= "border : none;" src="6. sketch2/sketch65.png" height= "350">
+
+        <p style="margin-top:150px;"></p>
+        <h3><li>구성 형상</li></h3>
+        <p style="margin-top:40px;"></p>    
+        <img src="6. sketch2/sketch67.png" height= "100">
+        <p>스케치를 하다보면 형상에 필요하지는 않지만 스케치를 구성하기 위해 꼭 필요한 스케치가 있을 겁니다.</p>
+        <p>예를 들어 기어를 스케치할 때 구성 스케치를 통해 기어이의 쉐입을 잡아갑니다.</p>
+        <img style= "border :none;" src="6. sketch2/sketch75.png" height= "350">
+        <p>구성 스케치를 지원하기 위해 Creo에는 '구성 형상'이라는 모드가 있습니다.</p>
+        <p>'스케치 탭 > 스케치 그룹 > 구성 모드'를 활성화하면 구성 모드 스케치로 바뀝니다.</p>
+        <p style="margin-top:120px;"></p>
+        <h3 style="border : solid green; display: inline; padding: 10px;">중간 실습</h3>
+        <p style="margin-top:30px;"></p>
+        <img style= "border :none;" src="1. Set working Directory/Set working Directory6.png" height="60">
+        <p><strong>1. 새로 만들기.</strong></p>
+        <p>('파일  > 새로 만들기' 혹은 '빠른 도구 모음'에서)</p>
+        <img src="5. sketch/sketch1.png" height="360">
+        <p><strong>2. 유형을 스케치로 선택합니다.</strong></p>
+        <img src="6. sketch2/sketch68.png" height= "500">
+        <p><strong>3. '스케치 탭 > 검사 그룹 > 검사 도구'를 위와 같이 체크해줍니다.</strong></p>
+        <img style= "border :none;" src="6. sketch2/sketch69.png" height= "200">
+        <p>'그래픽 내 도구모음'에서도 설정 가능합니다.</p>
+        <img style= "border :none;" src="6. sketch2/sketch70.png" height= "200">
+        <p><strong>4. '그래픽 내 도구모음'에서 디스플레이를 위와 같이 체크해줍니다.</strong></p>
+        <img style= "border :none;" src="6. sketch2/sketch71.png" height= "350">
+        <p><strong>5. '스케치 탭 > 스케치 그룹 > 중심선'으로 위와 같이 스케치합니다.</strong></p>
+        <p>&nbsp&nbsp&nbsp 스케치 목표는 수평선에서 40° 방향에 원을 생성하는 것입니다.</p>
+        <img src="6. sketch2/sketch67.png" height= "100">
+        <p><strong>6. '스케치 탭 > 스케치 그룹 > 구성 모드'를 클릭해 활성화합니다.</strong></p>
+        <img style= "border :none;" src="6. sketch2/sketch72.png" height= "350">
+        <p><strong>7. '스케치 탭 > 스케치 그룹 > 선'으로 위와 같이 스케치합니다. 구성 모드 적용은 실선으로 표시됩니다.</strong></p>
+        <img style= "border :none;" src="6. sketch2/sketch73.png" height= "350">
+        <p><strong>8. '스케치 탭 > 스케치 그룹 > 구성 모드'를 클릭해 비활성화합니다.</strong></p>
+        <p><strong>&nbsp&nbsp '스케치 탭 > 스케치 그룹 > 원'으로 위와 같이 스케치합니다.</strong></p>
+        <img style= "border :none;" src="6. sketch2/sketch74.png" height= "440">
+        <p><strong>9. '스케치 탭 > 치수 그룹 > 치수'로 위와 같이 치수를 입력합니다.</strong></p>
+        <p><strong>10. '닫기' 및 '표시되지 않은 항목 지우기'를 클릭합니다.</strong>
+
+        <p style="margin-top:150px;"></p>
+        <h3><li>스케치 참조, 투영</li></h3>
+        <p style="margin-top:40px;"></p>
+        <img style= "border :none;" src="6. sketch2/sketch76.png" height= "440">
+        <p>위와 같은 6면체의 윗면에 두개의 원기둥을 만드려합니다.</p>
+        <p>이 원기둥을 6면체 윗면의 특정 위치에 생성하기 위해서는, 스케치에서 6면체의 모서리 위치를 알아야합니다.</p>
+        <img style= "border :none;" src="6. sketch2/sketch79.png" height= "440">
+        <p>그럴 때 사용할 수 있는 기능이 바로 '참조'입니다.</p>
+        <p>참조를 사용하면 모서리 위치를 스케치에 반영시켜 줍니다.</p>
+        <img src="6. sketch2/sketch80.png" height= "100">
+        <p>'스케치 탭 > 설정 그룹 > 참조'를 사용해 원하시는 형상을 적용하시면 됩니다.</p>
+        <img style= "border :none;" src="6. sketch2/sketch81.png" height= "440">
+        <p>참조를 통해 윈기둥의 위치를 스케치한 모습입니다.</p>
+        <p style="margin-top: 30px;">'참조'로 사용이 아니라 형태를 '투영'하고 싶을 때는 '투영' 기능을 사용하면 됩니다.</p>
+        <img src="6. sketch2/sketch82.png" height= "100">
+        <p>투영은 '스케치 탭 > 스케치 그룹 > 투영'에서 사용할 수 있습니다.</p>
+        <li>참조 : 형상을 <u>구성 모드</u> 스케치로 가져옴</li>
+        <li>투영 : 형상을 스케치로 가져옴</li>
+        <p ><img style= "border :none;" src="6. sketch2/sketch96.png" height= "420"><img style= "border :none;" src="6. sketch2/sketch105.png" height= "420"></p>
+        <img style= "border :none;" src="6. sketch2/sketch83.png" height= "400">
+
+        <p style="margin-top:150px;"></p>
+        <h3><li>오프셋, 세그먼트 삭제, 나누기</li></h3>
+        <p style="margin-top:40px;"></p>
+        <img src="6. sketch2/sketch84.png" height= "100">
+        <p>'오프셋'은 일정 거리를 오프셋 시켜 형상을 복사합니다.</p>
+        <img style= "border :none;" src="6. sketch2/sketch85.png" height= "300">
+        <p>원을 '3'만큼 바깥 방향으로 오프셋 시키면 위와 같이 됩니다.</p>
+        <p style="margin-top:50px;"></p>
+        <img src="6. sketch2/sketch86.png" height= "100">
+        <p>'세그먼트 삭제'로 불필요한 스케치를 삭제할 수 있습니다. 중복점을 기준으로 스케치 요소를 나누어 삭제합니다.</p>
+        <img style= "border :none;" src="6. sketch2/sketch87.png" height= "300">
+        <p style="margin-top:50px;"></p>
+        <img src="6. sketch2/sketch88.png" height= "100">
+        <p>'코너'를 이용해 두 선을 이어줍니다.</p>
+        <img style= "border :none;" src="6. sketch2/sketch89.png" height= "300">
+        <p style="margin-top:50px;"></p>
+        <img src="6. sketch2/sketch90.png" height= "100">
+        <p>'나누기'를 이용해 스케치 요소를 나눠줄 수 있습니다. </p>
+        <img style= "border :none;" src="6. sketch2/sketch91.png" height= "300">
+
+        <p style="margin-top:150px;"></p>
+        <h3><li>대칭 복사, 배율, 회전</li></h3>
+        <p style="margin-top:40px;"></p>
+        <img style= "border :none;" src="6. sketch2/sketch92.png" height= "400">
+        <p>'대칭 복사'와 '회전 크기 조정'은 적용할 스케치 요소를 선택해야 활성화됩니다.</p>
+        <p>'대칭 복사'를 위해서는 중심선으로 사용할 선이 필요합니다. 기준으로 사용할 선이면 꼭 중심선이 아니어도 상관없습니다. </p>
+        <img style= "border :none;" src="6. sketch2/sketch93.png" height= "280">
+        <p style="margin-top:50px;"></p>
+        <img src="6. sketch2/sketch94.png" height= "100">
+        <p>'회전 크기 조정'을 선택하면 리본의 구성이 변경됩니다.</p>
+        <p> 위와 같이 참조를 기준으로 이동, 회전, 배율 확대축소를 할 수 있습니다.</p>
+        <img style= "border :none;" src="6. sketch2/sketch95.png" height= "300">
+        <p>혹은 단순히 핸들을 드레그해 변경할 수도 있습니다.</p> 
+        
+        <p style="margin-top:120px;"></p>
+        <h3 style="border : solid green; display: inline; padding: 10px;">중간 실습</h3>
+        <p style="margin-top:50px;"></p>
+        <p>간단한 실습을 진행하고 스케치 교육을 마무리 하겠습니다.</p>
+        <img style= "border :none;" src="1. Set working Directory/Set working Directory6.png" height="60">
+        <p><strong>1. 스케치 새로 만들기.</strong></p>
+        <img style= "border :none;" src="6. sketch2/sketch98.png" height= "200">
+        <p><strong>2. 원 <img style= "border :none; margin: 0" src="6. sketch2/sketch97.png" height="20">을 선택하고 아무 위치에 스케치합니다.</strong></p>
+        <img style= "border :none;" src="6. sketch2/sketch100.png" height= "200">
+        <p><strong>3. 선<img style= "border :none; margin: 0" src="6. sketch2/sketch99.png" height="30">을 선택하고 위와 같이 스케치합니다. (치수를 맞출 필요 없습니다.)</strong></p>
+        <img style= "border :none;" src="6. sketch2/sketch101.png" height= "200">
+        <p><strong>4. 세그먼트 삭제<img style= "border :none; margin: 0" src="6. sketch2/sketch102.png" height="25">를 선택하고 위와 같이 삭제합니다. (치수 무관)</strong></p>
+        <img style= "border :none;" src="6. sketch2/sketch103.png" height= "250">
+        <p><strong>5. 치수<img style= "border :none; margin: 0" src="6. sketch2/sketch104.png" height="20">를 선택하고 위와 같이 치수를 만들고 수정합니다.</strong></p>
+        <p>&nbsp&nbsp 지름 치수를 만드려면 원의 양쪽 끝을 클릭하고 치수를 생성합니다.</p>
+        <p style="margin-top:70px;"></p>
+        <p style="margin-top: 30px;">수고하셨습니다.</p>
+        <p style="margin-top:80px;"></p>
+    <h3><a href="CreoBasic.html" title="Creo 기본 교육 메인페이지로 이동" class="saw" id="active">Creo 기본 교육 페이지로 돌아가기</a></h3>
+    </div>
+    <div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>Creo 기본 교육 - 2. 인터페이스 사용</title>
+    <link rel="icon" href="../../favicon.png">
+    <meta charset="utf-8"> 
+    <style>
+     a {
+        color: black;
+        text-decoration: none;
+     }
+     h1 {
+        font-size: 50px;
+        text-align: center;
+        border-width: 7px;
+        border-color: green;
+        border-style: ridge;
+        margin: 0px;
+        padding: 15px;
+     }
+     #active {
+        color: blue;
+     }
+     .saw {
+        color: gray;
+     }
+     #grid {
+        display: grid;
+        grid-template-columns: 300px 1300px 200px;
+        grid-template-areas:
+            "index  main  log"
+    }
+    iframe {
+        position: fixed;
+        border-right: 2px solid green;
+        border-bottom: none;
+        border-left: none;
+        border-top: none;
+        width: 300px;
+        height: 100%;
+        margin: 0px;
+    }
+    @media(max-width :1300px) {
+        #grid {
+            display: block;
+            margin-top: 1000px;
+        }
+        iframe {
+            position: absolute;
+        }    
+    }
+    img {
+        margin: 40px 50px 10px 0px;
+    }
+    body {
+      margin: 0px;
+    }
+    u {
+        color: rgb(51, 104, 51)
+    }
+    </style>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+<p style="margin-top:5px;"></p>
+<h1><a href="CreoBasic.html" style="color: green" title="Creo 기본 교육 메인페이지로 이동">Creo 기본 교육</a></h1>
+<iframe src="CreoBasicIndex.html"></iframe>
+<div id="grid">
+    <div></div>
+    <div style="margin-left:60px;">
+    <p style="margin-top:100px;"></p>
+        <h3><li>디스플레이 옵션 이해</li></h3>
+        <p style="margin-top:50px;"></p>
+        <p><strong><u>기준 데이텀 가시성</u></strong></p>
+        <img src="2. mapkey/Mapkey1.png" height="400">
+        <p>모델의 형상이 복잡하고, part가 많아질수록 기준 데이텀이 가시성과 객체의 선택을 방해합니다.</p>
+        <p>위 그림처럼 기준 데이텀이 많아지면 모델의 특정 표면들은 아예 선택할 수 없어집니다.</p>
+        <p>이를 위해 '그래픽 내 도구 모음'에 '기준 디스플레이 필터'를 이용해 한번에 가시성을 제어할 수 있습니다.</p>
+        <p>(각 개체별 가시성 제어는 추후 설명드리겠습니다.)</p>
+        <p style="margin-top: 40px;"></p>
+        <img src="2. mapkey/Mapkey2.png" height="170">
+        <p>각 데이텀 종류의 체크 박스를 통해서 가시성을 제어해 주시면 됩니다.</p>
+        <p>모든 기준 데이텀의 가시성을 비활성화 시킨 후 모델 디스플레이를 비교해 보겠습니다.</p>
+        <p style="margin-top: 50px;"></p>
+        <img src="2. mapkey/Mapkey3.png" height="350"><img src="2. mapkey/Mapkey4.png" height="350">  
+        <p>디스플레이에 따라 큰 차이가 발생하는 것을 볼 수 있습니다.</p>
+        <p style="margin-top:90px;"></p>
+        <p><strong><u>모델 디스플레이 유형</u></strong></p>
+        <img src="2. mapkey/Mapkey5.png" height="550">
+        <p>모두 같은 너트지만 어떤 디스플레이 유형을 사용하느냐에 따라 이미지가 달라집니다.</p>
+        <p style="margin-top: 40px;"></p>
+        <img src="2. mapkey/Mapkey6.png" height="180">
+        <p>이는 '그래픽 내 도구 모음'에 '디스플레이 유형'으로 변경할 수 있습니다.</p>
+        <p>설계 시에는 '모서리를 포함한 음영처리'를 주로 사용하지만, 파이프나 덕트 같은 특정 모델은 와이어프레임을 사용하기도 합니다.</p>
+        <p></p>
+        <p style="margin-top:140px;"></p>
+        <h3><li>보기 방향 생성</li></h3>
+        <p style="margin-top:50px;"></p>
+        <p><strong><u>저장된 방향</u></strong></p>
+        <img src="2. mapkey/Mapkey7.png" height="220">
+        <p>휠로 방향을 조정할 수 있지만 Creo에서는 기본적인 방향을 제공합니다.</p>
+        <p>'그래픽 내 도구 모음'에 '저장된 방향'을 눌러보시면 기본적으로 저장된 방향들이 있습니다.</p>
+        <p>이 방향들은 초기에 생성된 기준 데이텀을 기준으로 자동 작성됩니다.</p>
+        <p style="margin-top:90px;"></p>
+        <p><strong><u>방향 생성</u></strong></p>
+        <img src="2. mapkey/Mapkey8.png" height="220">
+        <p>제품 승인서에 들어가는 isometric나 고객사의 요청으로 특정 방향이 필요할 때가 있습니다.</p>
+        <p>이럴 때는 방향 생성을 이용합니다. '저장된 방향 > 재정위'를 통해 원하는 방향을 만든 후 저장할 수 있습니다.</p>
+        <p style="margin-top: 40px;"></p>
+        <img src="2. mapkey/Mapkey9.png" height="450"><img src="2. mapkey/Mapkey10.png" height="200">
+        <P>그러면 저장된 방향에 목록이 추가되며 언제든지 사용할 수 있게 됩니다.</P>
+        <p>이때 생성한 방향은 후에 <u>도면화 작업에서도 사용할 수 있으므로 도면화 작업에 필요한 방향을 미리 생성합시다.</u></p>
+        <p style="margin-top:110px;"></p>
+        <h3><li>모양새 관리 및 편집</li></h3>
+        <p style="margin-top:50px;"></p>
+        <p><strong><u>모양새 적용</u></strong></p>
+        <img src="2. mapkey/Mapkey11.png" height="150">
+        <p>파트가 조립됐을 때 서로 구분하기 위해서 혹은 재질의 표현을 위해서 모양새 적용이 필요합니다.</p>
+        <p>'보기 탭 > 모양새 그룹 > 모양새'에서 드롭다운을 클릭합니다.</p>
+        <p style="margin-top: 40px;"></p>
+        <img src="2. mapkey/Mapkey12.png" height="450">
+        <p>'내 모양새'에서 사용한 모양새들을 다시 사용할 수 있습니다.</p>
+        <p>'라이브러리'의 드롭다운을 보시면 재질별 재공하는 기본 모양새를 확인할 수 있습니다.</p>
+        <p style="margin-top:90px;"></p>
+        <p><strong><u>모양새 편집</u></strong></p>
+        <img src="2. mapkey/Mapkey13.png" height="450">
+        <p>모양새를 새로 제작하고 싶다면 '추가 모양새'를 사용하고 있는 모양새를 편집하고 싶다면 '모델 모양새 편집'을 활용합니다.</p>
+        <p>(만약 '모델 모양새 편집'이 활성화되지 않았다면, 선택한 모양새가 없어서 그렇습니다.)</p>
+        <p style="margin-top:110px;"></p>
+        <h3 style="border : solid green; display: inline; padding: 10px;">중간 실습</h3>
+        <p style="margin-top:50px;"></p>
+        <p>이전 실습에서 생성한 육면체를 이용해 실습해봅시다.</p>
+        <img src="2. mapkey/Mapkey14.png" height="400">
+        <p><strong>1. '그래픽 내 도구 모움'에 '기준 디스플레이 필터'의 모두 선택을 체크 해제합니다.</strong></p>
+        <img src="2. mapkey/Mapkey15.png" height="400">
+        <p><strong>2. '그래픽 내 도구 모움'에 '디스플레이 유형'에서 '반사를 포함한 음영 처리'를 선택합니다.</strong></p>
+        <img src="2. mapkey/Mapkey16.png" height="400">
+        <p><strong>3. '그래픽 내 도구 모움'에 '저장된 방향'에서 'Top'을 선택합니다. "표준 방향'을 선택합니다.</strong></p>
+        <img src="2. mapkey/Mapkey17.png" height="600">
+        <p><strong>4. '그래픽 내 도구 모움'에 '저장된 방향'에서 '재정위'를 선택합니다. 보기 이름을 'isometric1'으로 적어줍니다.</strong></p>
+        <p><strong>5. 방향 유형을 '동적 정위'로 바꾸고 회전 기준을 '중심 축'으로 지정해 줍니다.</strong></p>
+        <p><strong>6. H축을 30, V축을 30, C축을 30으로 입력하고 보기 이름 옆에 저장을 클릭합니다. 확인을 눌러 창을 꺼줍니다.</strong></p>
+        <img src="2. mapkey/Mapkey10.png" height="200">
+        <p><strong>7. 마우스 휠버튼을 이용해 방향을 움직인 후 '저장된 방향'의 'isometric1'을 클릭합니다.</strong></p>
+        <img src="2. mapkey/Mapkey18.png" height="400">
+        <p>위와 같이 내가 지정한 방향으로 다시 복귀됐는지 확인합니다.</p>
+        <p>(밀어내기 방향에 따라 이미지와 뷰가 다를 수도 있으니 내가 지정했던 방향과 동일한지만 확인합니다.)</p>
+        <img src="2. mapkey/Mapkey19.png" height="400">
+        <p><strong>8. '보기 탭 > 모양새 그룹 > 모양새 드롭다운'에서 위 그림과 같이 선택해 Gold 계열의 라이브러리를 불러온다.</strong></p>
+        <img src="2. mapkey/Mapkey20.png" height="300">
+        <p><strong>9. 한 서피스에 적용하고 싶다면 서피스를 클릭하여 적용, 한번에 적용하고 싶다면 '모델트리 > 설계 항목 > 바디1'에 적용해준다.</strong></p>
+        <img src="2. mapkey/Mapkey21.png" height="400">
+        <p>이미지와 같이 Gold 모양새가 적용됐는지 확인합니다.</p>
+        <p style="margin-top:140px;"></p>
+        <h3><li>세이브/로드/닫기</li></h3>
+        <p style="margin-top:50px;"></p>
+        <p><strong><u>세이브/로드</u></strong></p>
+        <img src="2. mapkey/Mapkey22.png" height="400">
+        <p>'파일 > 열기, 저장, 다른 이름으로 저장'으로 세이브와 로드를 할 수 있습니다.</p>
+        <p>이는 빠른 도구 모음에서도 활용할 수 있습니다.</p>
+        <p>열기는 파일 로드로 주의하실 점은 <u>높은 버전의 creo로 설계한 파일을 낮은 버전의 creo에서 오픈할 수 없습니다.</u></p>
+        <p>(반대로 낮은 버전의 creo에서 설계한 파일은 높은 버전의 creo에서 오픈할 수 있습니다.)</p>
+        <img src="2. mapkey/Mapkey23.png" height="70"><img src="2. mapkey/Mapkey24.png" height="70"><img src="2. mapkey/Mapkey25.png" height="70">
+        <p>다른 확장에서도 다음과 같은 아이콘은 모두 열기, 저장, 다른 이름으로 저장의 기능을 가지니 참고하시기 바랍니다.</p>
+        <p>열기와 저장은 특별히 경로를 변경하지 않으면 자동으로 작업 디렉토리에 진행됩니다.</p>
+        <img src="2. mapkey/Mapkey26.png" height="350"><img src="2. mapkey/Mapkey27.png" height="400">
+        <p>'다른 이름으로 저장'으로 파일 형식을 변경할 수 있습니다.</p>
+        <p>내보내기 프로파일을 설정해야 데이텀이나 주석, 모양색 등의 정보를 유지할 수 있습니다.</p>
+        <img src="2. mapkey/Mapkey28.png" height="400"><img src="2. mapkey/Mapkey29.png" height="70">
+        <p>'파일 > 닫기'로 파일을 닫습니다. 역시 빠른 도구 모음에서도 활용할 수 있습니다. </p>
+        <img src="2. mapkey/Mapkey30.png" height="400">
+        <p>닫기 후에 꼭 '표시되지 않은 항목 지우기'를 실행합니다.</p>
+        <p>이를 실행하지 않으면 동일한 이름의 파일 기록이 지워지지 않아 파일에 문제가 생길 가능성이 있습니다. 습관적으로 실행합시다.</p>
+        <p style="margin-top:110px;"></p>
+        
+        <h3><li>단축키 및 맵키 사용</li></h3>
+        <p style="margin-top:50px;"></p>
+        <p><strong><u>단축키</u></strong></p>
+        <img src="2. mapkey/Mapkey31.png" height="400">
+        <p>단축키를 활용하시면 작업 피로도를 줄일 수 있습니다.</p>
+        <P>자주 사용하는 단축키를 모아봤습니다.</P>
+        <img src="2. mapkey/Mapkey32.png" height="390">
+        <p>단축키만으로는 기능을 편하게 사용하는데 한계가 있습니다.</p>
+        <p>설계자들이 자주 사용하는 기능들은 맵키를 사용하시는게 좋습니다.</p>
+        <p>이때 맵키로 지정하는 키는 단축키와 중복될 수 없습니다.</p>
+        <p>실습을 통해 설계자들이 자주 사용하는 기능 두가지를 맵키로 구형해 봅시다.</p>
+        <p style="margin-top:110px;"></p>
+        <h3 style="border : solid green; display: inline; padding: 10px;">중간 실습</h3>
+        <p style="margin-top:50px;"></p>
+        <p>이전 실습에서 모양새 적용한 육면체를 이용해 실습해봅시다.</p>
+        <img src="2. mapkey/Mapkey33.png" height="400">
+        <p><strong>1. '파일 > 옵션'을 클릭합니다.</strong></p>
+        <img src="2. mapkey/Mapkey32.png" height="400">
+        <p><strong>2. 옵션 카테고리 중 '글로벌 > 환경'을 선택하고 '맵키 설정'을 클릭합니다.</strong></p>
+        <img src="2. mapkey/Mapkey34.png" height="400">
+        <p><strong>3. '새로 만들기'를 클릭합니다.</strong></p>
+        <img src="2. mapkey/Mapkey35.png" height="400">
+        <p><strong>4. '바로 가기 키'를 저장하고 '기록'을 클릭합니다.</strong></p>
+        <p>(후에 설계자가 연상하기 편한 바로 가기 키로 변경하시면 됩니다.)</p>
+        <img src="2. mapkey/Mapkey36.png" height="400">
+        <p><strong>5. 서피스를 선택합니다. 미니 툴바가 활성화 되면 '수직 보기'를 클릭합니다.</strong></p>
+        <img src="2. mapkey/Mapkey37.png" height="400">
+        <p><strong>6. '중지'를 클릭해 기록은 중지합니다.</strong></p>
+        <img src="2. mapkey/Mapkey34.png" height="400">
+        <p><strong>7. '새로 만들기'를 클릭합니다.</strong></p>
+        <img src="2. mapkey/Mapkey38.png" height="400">
+        <p><strong>8. '바로 가기 키'를 저장하고 '기록'을 클릭합니다.</strong></p>
+        <img src="2. mapkey/Mapkey39.png" height="400">
+        <p><strong>9. '분석 탭 > 측정 그룹 > 측정'을 클릭하여 기능을 활성화 하고 '중지'를 클릭합니다.</strong></p>
+        <p><strong>10. 이제 활성화된 창(맵키 창, 측정 창 등)을 모두 종료하고 기능을 사용해봅시다.</strong></p>
+        <p><strong>&nbsp &nbsp서피스를 선택하고 'ff'를 입력합니다. 이때 입력 속도가 어느정도 빨라야 합니다.</strong></p>
+        <img src="2. mapkey/Mapkey40.gif" height="400">
+        <p>'mm'을 입력해 측정을 활성화 합니다. 만약 기능이 활성화되고 있지 않다면 다른 키가 눌렸을 가능성이 있습니다.</p>
+        <p>이를 확인하기 위해서는 상태 표시줄을 확인하시면 됩니다.</p>
+        <p>상태 표시줄에 잘못된 키가 기록되있다면 'enter'를 눌르면 기록이 초기화 됩니다.</p>
+        <img src="2. mapkey/Mapkey.gif" height="400">
+        <p>수고하셨습니다.</p>
+        <p style="margin-top:80px;"></p>
+    <h3><a href="CreoBasic.html" title="Creo 기본 교육 메인페이지로 이동" class="saw" id="active">Creo 기본 교육 페이지로 돌아가기</a></h3>
+    </div>
+    <div></div>
+</div>
+</body>
+</html>
