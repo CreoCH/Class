@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>Creo 기본 교육</title>
+    <link rel="icon" href="../../favicon.png">
+    <meta charset="utf-8"> 
+    <style>
+     a {
+        color: black;
+        text-decoration: none;
+     }
+     h1 {
+        font-size: 50px;
+        text-align: center;
+        border-width: 7px;
+        border-color: green;
+        border-style: ridge;
+        margin: 0px;
+        padding: 15px;
+     }
+     h4 {
+        display: inline;
+        position: fixed;
+    }
+     #active {
+        color: blue;
+     }
+     .saw {
+        color: gray;
+     }
+     #grid {
+        display: grid;
+        grid-template-columns: 360px 1000px 1fr;
+    }
+    #grid ul {
+        list-style: none;
+        border-right:2px solid green;
+        width: 210px;
+        margin: 0px;
+        padding: 10px 40px;
+     }
+    @media(max-width :1200px) {
+        #grid {
+            display: block;
+            margin: 30px;
+        }
+        #grid ul {
+            border-right: none;
+        }
+        h4 {
+            position: absolute;
+        }
+    }
+    img {
+        border-width: 1px;
+        border-color: black;
+        border-style: solid;
+        margin: 40px 50px 10px 0px;
+    }
+    body {
+      margin: 0px;
+    }
+    u {
+        color: rgb(51, 104, 51)
+    }
+    </style>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+<p style="margin-top:5px;"></p>
+<h1><a href="CreoBasic.html" style="color: green" title="Creo 기본 교육 메인페이지로 이동">Creo 기본 교육</a></h1>
+<div id="grid">
+    <ul style="color: black;">
+        <h4><li><a href="lginnotek.html" class="saw" id="active"> LG 이노텍 기술 대응</a></li></h4> 
+        <p style="margin-top:40px;"></p>
+        <h4><li><a href="Mapkey.html" class="saw" id="active">2. 인터페이스 사용</a></li></h4>
+        <p style="margin-top:80px;"></p>
+        <h4><li><a href="concept.html" class="saw" id="active">3. Parametric 개념</a></li></h4>
+        <p style="margin-top:120px;"></p>
+        <h4><li><a href="select.html" class="saw" id="active">4. 피쳐 선택 및 가시성 제어</a></li></h4>
+        <p style="margin-top:160px;"></p>
+        <h4><li><a href="sketch.html"  class="saw" id="active">5. 스케치</a></li></h4>    
+        <p style="margin-top:200px;"></p>
+        <h4><li><a href="Simulation.html" class="saw" id="active">6. 기준 피쳐 생성</a></li></h4>
+        <p style="margin-top:240px;"></p>
+        <h4><li><a href="Simulation.html" class="saw" id="active">7. 밀어내기, 회전, 리브</a></li></h4>
+        <p style="margin-top:280px;"></p>
+        <h4><li><a href="Simulation.html" class="saw" id="active">8. 구배, 라운드, 모따기</a></li></h4>
+        <p style="margin-top:320px;"></p>
+        <h4><li><a href="Simulation.html" class="saw" id="active">9. 블랜드, 구멍</a></li></h4>
+        <p style="margin-top:360px;"></p>
+        <h4><li><a href="Simulation.html" class="saw" id="active">10. 그룹화, 복사, 패턴, 미러링</a></li></h4>
+        <p style="margin-top:400px;"></p>
+        <h4><li><a href="Simulation.html" class="saw" id="active">11. 측정 및 검사</a></li></h4>
+        <p style="margin-top:440px;"></p>
+        <h4><li><a href="Simulation.html" class="saw" id="active">12. 일반 구속 어셈블</a></li></h4>
+        <p style="margin-top:480px;"></p>
+        <h4><li><a href="Simulation.html" class="saw" id="active">13. 어셈블리 분해</a></li></h4>
+        <p style="margin-top:520px;"></p>
+        <h4><li><a href="Simulation.html" class="saw" id="active">14. 단순화, 삭제 및 억제</a></li></h4>
+        <p style="margin-top:560px;"></p>
+        <h4><li><a href="Simulation.html" class="saw" id="active">15. 도면 개념</a></li></h4>
+        <p style="margin-top:600px;"></p>
+        <h4><li><a href="Simulation.html" class="saw" id="active">16. 도면화(2D)</a></li></h4>
+        <p style="margin-top:640px;"></p>
+        <h4 style ="font-size:20px;"><li><a href="Simulation.html" class="saw" id="active"> &nbsp- 프로젝트 진행 -</a></li></h4>
+        <p style="margin-top:680px;"></p>
+    </ul>
+<div>
+    <p style="margin-top:50px;"></p>
+    <h3>교육에 앞서</h3>
+    <p><strong>&nbsp&nbsp : 본 교육은 Creo parametric 기본 교육입니다.</strong></p>
+    <p><strong>&nbsp&nbsp&nbsp Creo를 처음 접하는 사용자를 위한 교육으로,기본 교육이 필요없는 분들은 <a href="아직 미정.html" class="saw" id="active">'중급 교육'</a>부터 진행하시기 바랍니다.</strong></p>
+    <p><strong>&nbsp&nbsp&nbsp 본 교육을 마치면 다음과 같은 결과물을 설계할 수 있습니다.</strong></p>
+    <p><img src="CreoBasicProject1.gif" height="450">
+    <p style="margin-top:90px;"></p>
+    <ol>
+        <h3><li><a href="" title="클릭 시 이동" class="saw" id="active">&nbsp 기초 교육</a></li></h3>
+        <img src="1. Set working Directory/Set working directory.gif" height="350">
+        <p>교육에 필요한 필수 기능들의 위치를 알아봅니다.</p>
+        <p>이 교육 후에는 '모델 탭 > 편집 그룹 > 패턴'이 어디에 위치하는지 알 수 있습니다.</p>
+        <p style="margin-top: 30px;">이 교육에서는 다음과 같은 교육이 진행됩니다.</p>
+        <p style="margin-top:30px;">- 작업디렉토리 설정</p>
+        <p>- 파일 생성</p>
+        <P>- 화면 구성</p>
+        <p>- 화면 방향 조정</p>
+        <p style="margin-top:90px;"></p>
+        <h3><li><a href="" title="클릭 시 이동" class="saw" id="active">&nbsp 인터페이스 사용</a></li></h3>
+        <img src="2. mapkey/Mapkey.gif" height="350">
+        <p>디스플레이를 조정하여 설계를 진행합니다.</p>
+        <p>사용자가 직접 맵키를 설정하는 법을 배워봅시다.</p>
+        <p>(위 이미지는 맵키를 활용하여 마우스를 사용하지 않고 기능을 사용하는 모습입니다.)</p>
+        <p style="margin-top: 30px;">이 교육에서는 다음과 같은 교육이 진행됩니다.</p>
+        <p style="margin-top:30px;">- 디스플레이 옵션 이해</p>
+        <p>- 보기 방향 생성</p>
+        <p>- 모양새 생성 및 편집</p>
+        <p>- 세이브/로드/닫기</p>
+        <p>- 단축키 및 맵키 사용</p>
+        <p style="margin-top:90px;"></p>
+        <h3><li><a href="" title="클릭 시 이동" class="saw" id="active">&nbsp Parametric 개념</a></li></h3>
+        <img src="3. concept/concept.gif" width="450">
+        <p>Creo에는 2D CAD와 다른 주요 개념들이있습니다.</p>
+        <p>이를 모르면 작업 시 참조 오류나 피쳐 누락이 발생할 가능성이 있습니다.</p>
+        <p style="margin-top: 30px;">이 교육에서는 다음과 같은 교육이 진행됩니다.</p>
+        <p style="margin-top:30px;">- 모자 관계</p>
+        <P>- 연관성</p>
+        <p>- 모델트리</p>
+        <p style="margin-top:90px;"></p>
+        <h3><li><a href="" title="클릭 시 이동" class="saw" id="active">&nbsp 피쳐 선택 및 가시성 제어</a></li></h3>
+        <img src="4. select/select2.gif" width="450">
+        <p>설계를 진행하기 위해 피쳐를 선택합니다.</p>
+        <p>가시성을 컨트롤해 내부를 설계하거나 제품 승인에 활용합니다.</p>
+        <p style="margin-top: 30px;">이 교육에서는 다음과 같은 교육이 진행됩니다.</p>
+        <p style="margin-top:30px;">- 그래픽 창에서 선택</p>
+        <P>- 순차 선택 및 모델트리</P>
+        <P>- 선택 필터 적용 선택</p>
+        <p>- 가시성 제어</p>
+        <p style="margin-top:90px;"></p>
+        <h3><li><a href="" title="클릭 시 이동" class="saw" id="active">&nbsp 스케치1</a></li></h3>
+        <img src="5. sketch/sketch1.gif" width="500">
+        <p>이제부터 본격적으로 Creo 사용법을 교육합니다.</p>
+        <p>여태까지 이론, 설명 중심으로 교육이 진행됐다면 이제부터는 실습이 중심이 됩니다.  </p>
+        <p style="margin-top: 30px;">스케치는 설계의 기본입니다.</p>
+        <p>이번 시간에는 스케치를 공부해 보겠습니다.</p>
+        <p style="margin-top: 30px;">이 교육에서는 다음과 같은 교육이 진행됩니다.</p>
+        <p style="margin-top:30px;">- 스케치 </p>
+        <p>- 스케치 디스플레이 옵션</p>
+        <p>- 제약 조건 활용</p>
+        <p>- 치수 제어 및 충돌 해결</p>
+        <p style="margin-top:90px;"></p>
+        <h3><li><a href="" title="클릭 시 이동" class="saw" id="active">&nbsp 스케치2</a></li></h3>
+        <img src="6. sketch2/sketch3.gif" width="400">
+        <p>지난 시간에이어 스케치2 교육을 진행하겠습니다.</p>
+        <p style="margin-top: 30px;">이 교육에서는 다음과 같은 교육이 진행됩니다.</p>
+        <p style="margin-top:30px;">- 열림, 닫힘, 검사도구</p>
+        <p>- 구성 형상</p>
+        <p>- 스케치 참조, 투영</p>
+        <p>- 오프셋, 세그먼트 삭제(트림), 나누기</p>
+        <p>- 대칭 복사, 배율, 회전</p>
+        <p style="margin-top:90px;"></p>
+        <h3><li><a href="" title="클릭 시 이동" class="saw" id="active">&nbsp 기준 데이텀</a></li></h3>
+        <img src="7. datum/datum1.gif" width="600">
+        <p>기준 피쳐는 점, 축, 면 같이 피쳐를 생성하기 위한 기준이 되는 피쳐들입니다.</p>
+        <p>설계를 하다보면 새로운 기준 피쳐를 생성해야 하는 경우들이 자주 있습니다.</p>
+        <p style="margin-top: 30px;">이 교육에서는 다음과 같은 교육이 진행됩니다.</p>
+        <p style="margin-top:30px;">- 기준점 생성 </p>
+        <p>- 기준축 생성</p>
+        <p>- 기준면 생성</p>
+        <p style="margin-top:90px;"></p>
+        <h3><li><a href="" title="클릭 시 이동" class="saw" id="active">&nbsp 밀어내기, 회전</a></li></h3>
+        <img src="7. datum/datum1.gif" width="600">
+        <p>이제 형상을 만드는 방법에 대해 교육하겠습니다.</p>
+        <p>밀어내기와 회전은 그중 가장 기본적인 방법으로 기본 토대에서 최종 작업까지 계속 사용되는 기능입니다.</p>
+        <p style="margin-top: 30px;">이 교육에서는 다음과 같은 교육이 진행됩니다.</p>
+        <p style="margin-top:30px;">- 밀어내기 </p>
+        <p>- 밀어내기 옵션</p>
+        <p>- 회전</p>
+    </ol>
+    </div>
+</div>
+</body>
+</html>
